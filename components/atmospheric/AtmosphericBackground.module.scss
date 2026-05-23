@@ -13,6 +13,12 @@
   50%      { transform: rotate(3deg); }
 }
 
+@keyframes cloudDrift {
+  0%   { transform: translateX(-60px); }
+  50%  { transform: translateX(60px); }
+  100% { transform: translateX(-60px); }
+}
+
 .world {
   position: fixed;
   inset: 0;
@@ -39,31 +45,41 @@
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 32%, #f7efcc 0%, #d4bc78 35%, #a07a38 65%, #5a3c10 90%);
   box-shadow:
     0 0 0 1px rgba(212,188,120,0.2),
     0 0 30px 10px rgba(212,188,120,0.15),
     0 0 80px 35px rgba(180,150,80,0.08),
     0 0 150px 70px rgba(150,120,60,0.04);
   animation: moonDrift 10s ease-in-out infinite;
+  overflow: hidden;
 }
 
-.crater {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(80, 50, 10, 0.25);
+.moonCrescent {
+  width: 100%;
+  height: 100%;
+  border-radius: 80%;
+  background: radial-gradient(circle at 38% 32%, #f7efcc 0%, #d4bc78 35%, #a07a38 65%, #5a3c10 90%);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    top: -8px;
+    right: -18px;
+    background: radial-gradient(circle at 60% 40%, #07102a, #040912);
+  }
 }
 
-.c1 { composes: crater; width: 14px; height: 14px; top: 28%; left: 52%; }
-.c2 { composes: crater; width: 8px; height: 8px; top: 55%; left: 35%; }
-.c3 { composes: crater; width: 6px; height: 6px; top: 38%; left: 30%; }
-
-.ring {
+.moonRing {
   position: absolute;
   inset: -14px;
   border-radius: 50%;
   border: 1px solid rgba(212, 188, 120, 0.08);
   box-shadow: inset 0 0 20px rgba(212, 188, 120, 0.05);
+  pointer-events: none;
 }
 
 .mist {
@@ -153,4 +169,20 @@
   opacity: 0.028;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 256px 256px;
+}
+
+.cloud {
+  position: absolute;
+  pointer-events: none;
+}
+
+.cloudPuff {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(200, 210, 230, 0.3) 40%,
+    transparent 70%
+  );
 }
