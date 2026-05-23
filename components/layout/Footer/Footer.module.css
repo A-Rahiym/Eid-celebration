@@ -1,0 +1,30 @@
+.footer {
+  position: relative;
+  padding: 3rem 2rem 2rem;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.arabic {
+  font-family: var(--font-noto-arabic), serif;
+  font-size: 1.1rem;
+  color: var(--ivory-25);
+  margin-bottom: 1.5rem;
+}
+
+.copy {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--ivory-25);
+  text-transform: uppercase;
+}
