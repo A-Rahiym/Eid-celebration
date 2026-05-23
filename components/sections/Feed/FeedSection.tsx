@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { Wish, WishFilter } from '@/lib/types';
+import styles from './FeedSection.module.scss';
 import Container from '@/components/layout/Container';
 import FeedToolbar from './FeedToolbar';
 import FeedGrid from './FeedGrid';
@@ -32,7 +33,7 @@ export default function FeedSection({ wishes, showNewBadge, onFilterChange }: Fe
     : wishes;
 
   return (
-    <section style={{ padding: '0 0 6rem' }} id="feed" aria-labelledby="feed-heading">
+    <section className={styles.section} id="feed" aria-labelledby="feed-heading">
       <Container>
         <FeedToolbar
           currentFilter={filter}

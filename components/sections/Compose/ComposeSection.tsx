@@ -1,5 +1,6 @@
 'use client';
 
+import styles from './ComposeSection.module.scss';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Container from '@/components/layout/Container';
 import ComposeCard from './ComposeCard';
@@ -10,7 +11,7 @@ interface ComposeSectionProps {
 
 export default function ComposeSection({ onSend }: ComposeSectionProps) {
   return (
-    <section style={{ padding: '0 0 4rem' }} aria-labelledby="compose-heading">
+    <section className={styles.section} aria-labelledby="compose-heading">
       <Container maxWidth="700px">
         <SectionHeader
           title="Share Your Eid Blessing"

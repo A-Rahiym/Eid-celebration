@@ -1,3 +1,5 @@
+import styles from './Container.module.scss';
+
 interface ContainerProps {
   children: React.ReactNode;
   maxWidth?: string;
@@ -11,12 +13,8 @@ export default function Container({
 }: ContainerProps) {
   return (
     <div
-      className={className}
-      style={{
-        maxWidth,
-        margin: '0 auto',
-        padding: '0 2rem',
-      }}
+      className={`${styles.container} ${className}`}
+      style={{ maxWidth }}
     >
       {children}
     </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './Navbar.module.css';
+import styles from './Navbar.module.scss';
 import NavLogo from './NavLogo';
 import LiveBadge from './LiveBadge';
 import MobileMenu from './MobileMenu';

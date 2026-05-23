@@ -1,3 +1,5 @@
+import styles from './ComposeSection.module.scss';
+
 interface CharCounterProps {
   current: number;
   max?: number;
@@ -5,13 +7,7 @@ interface CharCounterProps {
 
 export default function CharCounter({ current, max = 280 }: CharCounterProps) {
   return (
-    <span
-      aria-live="polite"
-      style={{
-        fontSize: '0.68rem',
-        color: 'var(--ivory-25)',
-      }}
-    >
+    <span className={styles.charCount} aria-live="polite">
       {current} / {max}
     </span>
   );

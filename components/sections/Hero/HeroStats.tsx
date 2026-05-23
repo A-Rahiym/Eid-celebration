@@ -1,4 +1,5 @@
 import { formatCount } from '@/lib/utils';
+import styles from './HeroSection.module.scss';
 
 interface HeroStatsProps {
   liveCount: number;
@@ -14,53 +15,12 @@ export default function HeroStats({ liveCount, wishCount, countriesCount }: Hero
   ];
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '3rem',
-        justifyContent: 'center',
-        animation: 'fadeUp 1.4s 0.58s ease both',
-      }}
-      aria-label="Celebration statistics"
-    >
+    <div className={styles.stats} aria-label="Celebration statistics">
       {stats.map((s, i) => (
-        <div key={s.label} style={{ textAlign: 'center' }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-cormorant), serif',
-              fontSize: '2rem',
-              fontWeight: 400,
-              color: 'var(--gold)',
-              lineHeight: 1,
-              display: 'block',
-            }}
-          >
-            {formatCount(s.num)}
-          </span>
-          <span
-            style={{
-              fontSize: '0.65rem',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: 'var(--ivory-25)',
-              marginTop: '0.3rem',
-              display: 'block',
-            }}
-          >
-            {s.label}
-          </span>
-          {i < stats.length - 1 && (
-            <span
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                width: 1,
-                height: 36,
-                background: 'var(--glass-border)',
-              }}
-            />
-          )}
+        <div key={s.label} className={styles.stat}>
+          <span className={styles.statNum}>{formatCount(s.num)}</span>
+          <span className={styles.statLabel}>{s.label}</span>
+          {i < stats.length - 1 && <span className={styles.statDivider} />}
         </div>
       ))}
     </div>

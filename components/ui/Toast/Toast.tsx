@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './Toast.module.css';
+import styles from './Toast.module.scss';
 
 interface ToastProps {
   icon: string;

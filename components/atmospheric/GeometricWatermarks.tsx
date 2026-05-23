@@ -1,16 +1,11 @@
+import styles from './AtmosphericBackground.module.scss';
+
 export default function GeometricWatermarks() {
   return (
     <>
       <svg
-        style={{
-          position: 'absolute',
-          top: '8%',
-          left: '2%',
-          width: 200,
-          height: 200,
-          opacity: 0.03,
-          pointerEvents: 'none',
-        }}
+        className={styles.watermark}
+        style={{ top: '8%', left: '2%', width: 200, height: 200 }}
         viewBox="0 0 200 200"
         aria-hidden="true"
       >
@@ -26,15 +21,8 @@ export default function GeometricWatermarks() {
       </svg>
 
       <svg
-        style={{
-          position: 'absolute',
-          bottom: '22%',
-          right: '2%',
-          width: 160,
-          height: 160,
-          opacity: 0.025,
-          pointerEvents: 'none',
-        }}
+        className={styles.watermarkTeal}
+        style={{ bottom: '22%', right: '2%', width: 160, height: 160 }}
         viewBox="0 0 200 200"
         aria-hidden="true"
       >

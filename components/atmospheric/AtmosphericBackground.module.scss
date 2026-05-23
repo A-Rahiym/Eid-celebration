@@ -1,0 +1,156 @@
+@keyframes moonDrift {
+  0%,100% { transform: translateY(0)   rotate(0deg); }
+  50%      { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes mistDrift {
+  0%,100% { transform: scaleX(1)    translateX(0);   opacity: 0.4; }
+  50%      { transform: scaleX(1.06) translateX(-2%); opacity: 0.65; }
+}
+
+@keyframes lanternRock {
+  0%,100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+
+.world {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -5%, #1a2e6e 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 15%, #12304a 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 25%, #1a0f50 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 50% 80%, #050e18 0%, transparent 70%),
+    linear-gradient(180deg, #0b1535 0%, #07102a 30%, #060d1e 60%, #040912 100%);
+}
+
+.moon {
+  position: absolute;
+  top: 7%;
+  right: 10%;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #f7efcc 0%, #d4bc78 35%, #a07a38 65%, #5a3c10 90%);
+  box-shadow:
+    0 0 0 1px rgba(212,188,120,0.2),
+    0 0 30px 10px rgba(212,188,120,0.15),
+    0 0 80px 35px rgba(180,150,80,0.08),
+    0 0 150px 70px rgba(150,120,60,0.04);
+  animation: moonDrift 10s ease-in-out infinite;
+}
+
+.crater {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(80, 50, 10, 0.25);
+}
+
+.c1 { composes: crater; width: 14px; height: 14px; top: 28%; left: 52%; }
+.c2 { composes: crater; width: 8px; height: 8px; top: 55%; left: 35%; }
+.c3 { composes: crater; width: 6px; height: 6px; top: 38%; left: 30%; }
+
+.ring {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 188, 120, 0.08);
+  box-shadow: inset 0 0 20px rgba(212, 188, 120, 0.05);
+}
+
+.mist {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse 100% 100%, rgba(16, 36, 90, 0.22), transparent);
+  animation: mistDrift var(--dur, 14s) ease-in-out infinite var(--del, 0s);
+}
+
+.terrain {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 340px;
+}
+
+.tFar {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 20, 50, 0.8) 60%, rgba(8, 16, 40, 0.95) 100%);
+  clip-path: polygon(
+    0% 65%, 2% 50%, 5% 58%, 8% 38%, 11% 54%, 14% 30%, 17% 46%,
+    20% 22%, 23% 40%, 27% 15%, 30% 36%, 33% 18%, 36% 42%, 40% 10%,
+    43% 32%, 46% 16%, 50% 8%, 53% 22%, 56% 12%, 60% 30%, 63% 14%,
+    66% 34%, 70% 18%, 73% 38%, 76% 22%, 80% 42%, 84% 26%, 87% 48%,
+    90% 30%, 93% 52%, 96% 36%, 100% 60%, 100% 100%, 0% 100%
+  );
+  opacity: 0.45;
+}
+
+.tMid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 230px;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 15, 35, 0.9) 40%, #060d1e 80%);
+  clip-path: polygon(
+    0% 55%, 3% 38%, 6% 50%, 9% 25%, 13% 45%, 17% 20%, 20% 40%,
+    24% 12%, 28% 35%, 32% 18%, 36% 38%, 40% 8%, 44% 30%, 48% 14%,
+    52% 32%, 56% 10%, 60% 28%, 64% 14%, 68% 35%, 72% 18%, 76% 40%,
+    80% 22%, 84% 44%, 88% 25%, 92% 48%, 96% 30%, 100% 52%,
+    100% 100%, 0% 100%
+  );
+}
+
+.tFront {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, transparent, var(--navy-deep) 85%);
+}
+
+.mosque { position: absolute; bottom: 62px; opacity: 0.55; }
+.mosqueLeft { composes: mosque; left: 4%; }
+.mosqueRight { composes: mosque; right: 5%; transform: scaleX(-1); }
+
+.lanternWrap { position: absolute; inset: 0; }
+
+.lantern {
+  position: absolute;
+  border-radius: 50%;
+  animation: lanternRock var(--sw, 6s) ease-in-out infinite var(--sd, 0s);
+  transform-origin: top center;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.watermark { position: absolute; opacity: 0.03; pointer-events: none; }
+.watermarkTeal { composes: watermark; opacity: 0.025; }
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}

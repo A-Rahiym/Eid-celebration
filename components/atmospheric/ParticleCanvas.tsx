@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useCanvas } from '@/hooks/useCanvas';
+import styles from './AtmosphericBackground.module.scss';
 
 interface Particle {
   x: number;
@@ -51,7 +52,7 @@ export default function ParticleCanvas({ particleCount = 60 }: ParticleCanvasPro
     particlesRef.current = createParticles(particleCount);
   }, [particleCount]);
 
-  useCanvas((ctx) => {
+  const canvasRef = useCanvas((ctx) => {
     const particles = particlesRef.current;
 
     for (const p of particles) {
@@ -76,9 +77,5 @@ export default function ParticleCanvas({ particleCount = 60 }: ParticleCanvasPro
     }
   }, [particleCount]);
 
-  return (
-    <canvas
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-    />
-  );
+  return <canvas ref={canvasRef} className={styles.canvas} />;
 }

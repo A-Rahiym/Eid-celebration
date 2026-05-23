@@ -1,4 +1,5 @@
 import type { WishFilter } from '@/lib/types';
+import styles from './FeedSection.module.scss';
 
 interface FeedToolbarProps {
   currentFilter: WishFilter;
@@ -18,67 +19,26 @@ export default function FeedToolbar({
   showNewBadge,
 }: FeedToolbarProps) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: '1.8rem',
-        flexWrap: 'wrap',
-        gap: '1rem',
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-        <h2
-          id="feed-heading"
-          style={{
-            fontFamily: 'var(--font-cormorant), serif',
-            fontSize: '1.4rem',
-            fontWeight: 300,
-            color: 'var(--ivory-75)',
-          }}
-        >
+    <div className={styles.toolbar}>
+      <div className={styles.titleRow}>
+        <h2 id="feed-heading" className={styles.heading}>
           Wishes from the World
         </h2>
         {showNewBadge && (
-          <span
-            aria-live="polite"
-            style={{
-              background: 'var(--teal-dim)',
-              border: '1px solid rgba(61,184,156,0.2)',
-              borderRadius: 20,
-              padding: '0.1rem 0.6rem',
-              fontSize: '0.62rem',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'var(--teal)',
-            }}
-          >
+          <span className={styles.newBadge} aria-live="polite">
             New
           </span>
         )}
       </div>
 
-      <div style={{ display: 'flex', gap: '0.4rem' }} role="group" aria-label="Filter wishes">
+      <div className={styles.filters} role="group" aria-label="Filter wishes">
         {FILTERS.map(f => (
           <button
             key={f.key}
             type="button"
             onClick={() => onFilterChange(f.key)}
             aria-pressed={currentFilter === f.key}
-            style={{
-              background: currentFilter === f.key ? 'var(--gold-glow-sm)' : 'var(--glass)',
-              border: `1px solid ${currentFilter === f.key ? 'rgba(201,169,110,0.2)' : 'var(--glass-border)'}`,
-              borderRadius: 20,
-              padding: '0.28rem 0.9rem',
-              fontFamily: 'var(--font-dm-sans), sans-serif',
-              fontSize: '0.7rem',
-              color: currentFilter === f.key ? 'var(--gold-pale)' : 'var(--ivory-50)',
-              cursor: 'pointer',
-              transition: 'all 0.2s',
-              letterSpacing: '0.04em',
-              minHeight: 36,
-            }}
+            className={`${styles.filterBtn} ${currentFilter === f.key ? styles.active : ''}`}
           >
             {f.label}
           </button>

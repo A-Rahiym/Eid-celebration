@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback } from 'react';
+import styles from './Home.module.scss';
 import AtmosphericBackground from '@/components/atmospheric/AtmosphericBackground';
 import GrainOverlay from '@/components/atmospheric/GrainOverlay';
 import Navbar from '@/components/layout/Navbar/Navbar';
@@ -42,7 +43,7 @@ function HomeContent() {
   );
 
   return (
-    <>
+    <div className={styles.app}>
       <Navbar liveCount={liveCount} />
 
       <HeroSection
@@ -63,7 +64,7 @@ function HomeContent() {
       />
 
       <Footer />
-    </>
+    </div>
   );
 }
 
@@ -72,9 +73,7 @@ export default function Home() {
     <ToastProvider>
       <AtmosphericBackground />
       <GrainOverlay />
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <HomeContent />
-      </div>
+      <HomeContent />
     </ToastProvider>
   );
 }

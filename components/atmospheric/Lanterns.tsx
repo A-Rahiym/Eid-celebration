@@ -1,3 +1,5 @@
+import styles from './AtmosphericBackground.module.scss';
+
 const LANTERN_CONFIGS = [
   { top: '12%', left: '8%', size: 18, color: 'rgba(201,169,110,0.55)', sw: 6, sd: 0 },
   { top: '18%', left: '22%', size: 12, color: 'rgba(255,140,60,0.45)', sw: 5, sd: -2 },
@@ -11,22 +13,21 @@ const LANTERN_CONFIGS = [
 
 export default function Lanterns() {
   return (
-    <div style={{ position: 'absolute', inset: 0 }} aria-hidden="true">
+    <div className={styles.lanternWrap} aria-hidden="true">
       {LANTERN_CONFIGS.map((c, i) => (
         <div
           key={i}
+          className={styles.lantern}
           style={{
-            position: 'absolute',
             top: c.top,
             left: c.left,
             width: c.size * 0.65,
             height: c.size,
             background: c.color,
-            borderRadius: '50%',
             boxShadow: `0 0 ${c.size * 1.2}px ${c.color.replace(/[\d.]+\)$/, '0.3)')}`,
-            animation: `lanternRock ${c.sw}s ease-in-out infinite`,
             animationDelay: `${c.sd}s`,
-            transformOrigin: 'top center',
+            ['--sw' as string]: `${c.sw}s`,
+            ['--sd' as string]: `${c.sd}s`,
           }}
         />
       ))}

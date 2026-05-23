@@ -1,19 +1,8 @@
+import styles from './HeroSection.module.scss';
+
 export default function HeroOrnament() {
   return (
-    <svg
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 620,
-        height: 620,
-        opacity: 0.03,
-        pointerEvents: 'none',
-      }}
-      viewBox="0 0 620 620"
-      aria-hidden="true"
-    >
+    <svg className={styles.ornament} viewBox="0 0 620 620" aria-hidden="true">
       <g fill="none" stroke="rgba(201,169,110,1)" strokeWidth="0.8">
         <circle cx="310" cy="310" r="300" />
         <circle cx="310" cy="310" r="240" />

@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { useCanvas } from '@/hooks/useCanvas';
+import styles from './AtmosphericBackground.module.scss';
 
 interface Star {
   x: number;
@@ -41,10 +42,5 @@ export default function StarCanvas({ starCount = 180 }: StarCanvasProps) {
     }
   }, [stars]);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-    />
-  );
+  return <canvas ref={canvasRef} className={styles.canvas} />;
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import styles from './Navbar.module.css';
+import styles from './Navbar.module.scss';
 
 const NAV_LINKS = [
   { label: 'Wall', href: '#feed' },
@@ -31,9 +31,9 @@ export default function MobileMenu() {
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
       >
-        <span className={`${styles.hamburgerLine} ${open ? styles.open : ''}`} />
-        <span className={`${styles.hamburgerLine} ${open ? styles.open : ''}`} />
-        <span className={`${styles.hamburgerLine} ${open ? styles.open : ''}`} />
+        <span className={open ? styles.hamburgerLineOpen : styles.hamburgerLine} />
+        <span className={open ? styles.hamburgerLineOpen : styles.hamburgerLine} />
+        <span className={open ? styles.hamburgerLineOpen : styles.hamburgerLine} />
       </button>
 
       {open && (
