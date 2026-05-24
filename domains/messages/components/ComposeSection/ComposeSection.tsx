@@ -5,6 +5,7 @@ import styles from './ComposeSection.module.scss';
 import SectionHeader from '@/domains/ui/components/SectionHeader/SectionHeader';
 import Container from '@/domains/ui/components/Container/Container';
 import ComposeCard from './ComposeCard';
+import { useMessageComposer } from '@/domains/messages/hooks/useMessageComposer';
 import MandalaRosette from '@/domains/ui/components/icons/MandalaRosette';
 import StarMedallion from '@/domains/ui/components/icons/StarMedallion';
 
@@ -13,6 +14,12 @@ interface ComposeSectionProps {
 }
 
 export default function ComposeSection({ onSend }: ComposeSectionProps) {
+  const {
+    text, setText,
+    location, setLocation,
+    insertEmoji, handleSend, isPending, textareaRef,
+  } = useMessageComposer(onSend);
+
   return (
     <section className={styles.section} aria-labelledby="compose-heading">
       <Container maxWidth="760px">
@@ -55,7 +62,16 @@ export default function ComposeSection({ onSend }: ComposeSectionProps) {
               <div className={styles.mfSideLine} />
             </div>
 
-            <ComposeCard onSend={onSend} />
+            <ComposeCard
+              text={text}
+              onTextChange={setText}
+              location={location}
+              onLocationChange={setLocation}
+              insertEmoji={insertEmoji}
+              handleSend={handleSend}
+              isPending={isPending}
+              textareaRef={textareaRef}
+            />
           </div>
         </motion.div>
       </Container>

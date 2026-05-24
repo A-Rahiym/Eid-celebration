@@ -75,16 +75,18 @@
 }
 
 .grid {
-  columns: 3;
-  column-gap: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  align-items: start;
 
   @media (max-width: 900px) {
-    columns: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 560px) {
-    columns: 1;
-    column-gap: 0.8rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 }
 
@@ -94,7 +96,6 @@
   border: 1px solid rgba(201,169,110,0.09);
   border-radius: 16px;
   padding: 1.4rem 1.4rem 1.2rem;
-  margin-bottom: 1.4rem;
   backdrop-filter: blur(12px) saturate(1.2);
   -webkit-backdrop-filter: blur(12px) saturate(1.2);
   transition: all 0.3s ease;

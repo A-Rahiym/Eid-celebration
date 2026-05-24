@@ -7,6 +7,7 @@ interface CreateMessageInput {
   displayName?: string;
   countryCode: string;
   messageText: string;
+  userId?: string;
 }
 
 export function useCreateMessageMutation() {
@@ -17,7 +18,12 @@ export function useCreateMessageMutation() {
       const res = await fetch('/api/messages/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(input),
+        body: JSON.stringify({
+          messageText: input.messageText,
+          countryCode: input.countryCode,
+          displayName: input.displayName,
+          userId: input.userId || undefined,
+        }),
       });
 
       if (!res.ok) {

@@ -2,6 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import { MessageRepository } from '@/domains/messages/repository/repository';
 import { UserRepository } from '@/domains/messages/repository/user-repository';
 import { validateMessage, validateDisplayName, isSpam } from '@/domains/messages/validator/validator';
+import { generateIdentity } from '@/lib/identity';
 import type { FeedMessage } from '@/lib/types';
 
 export class MessageService {
@@ -33,8 +34,8 @@ export class MessageService {
       throw new ValidationError('Message flagged as spam');
     }
 
-    const displayName = params.displayName?.trim() || 'Anonymous';
     const userId = params.userId || crypto.randomUUID();
+    const displayName = params.displayName?.trim() || generateIdentity(userId);
 
     await this.userRepo.upsert({
       id: userId,
