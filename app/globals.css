@@ -32,7 +32,7 @@
   --ivory-25:     rgba(245,240,232,0.25);
   --ivory-10:     rgba(245,240,232,0.08);
 
-  --glass:        rgba(255,255,255,0.035);
+  --glass:        rgba(10, 20, 40, 0.6);
   --glass-hover:  rgba(255,255,255,0.06);
   --glass-border: rgba(255,255,255,0.07);
   --glass-border-hover: rgba(201,169,110,0.22);
@@ -54,7 +54,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   position: relative;
   width: 100%;

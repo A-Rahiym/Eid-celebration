@@ -1,6 +1,8 @@
 'use client';
 
 import styles from './HeroSection.module.scss';
+import Moon from '@/domains/atmospheric/components/Moon';
+import Clouds from '@/domains/atmospheric/components/Clouds';
 import HeroOrnament from './HeroOrnament';
 import HeroStats from './HeroStats';
 import ScrollHint from './ScrollHint';
@@ -21,6 +23,10 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
+      <div className={styles.heroAtmos}>
+        <Moon />
+        <Clouds />
+      </div>
       <HeroOrnament />
 
       <div className={styles.eyebrow} aria-hidden="true">

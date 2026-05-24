@@ -26,12 +26,11 @@
 }
 
 .world {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  min-height: 100vh;
 }
 
 .sky {
@@ -47,8 +46,8 @@
 
 .moon {
   position: absolute;
-  top: 7%;
-  right: 10%;
+  top: 6%;
+  right: 16%;
   width: 96px;
   height: 96px;
   border-radius: 50%;
@@ -61,8 +60,8 @@
   overflow: hidden;
 
   @media (max-width: 768px) {
-    top: 5%;
-    right: 5%;
+    top: 3%;
+    right: 8%;
     width: 60px;
     height: 60px;
     box-shadow:
@@ -73,7 +72,7 @@
 
   @media (max-width: 480px) {
     top: 4%;
-    right: 4%;
+    right: 6%;
     width: 48px;
     height: 48px;
   }
