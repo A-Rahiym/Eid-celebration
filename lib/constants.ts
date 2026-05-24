@@ -1,19 +1,45 @@
-import type { Country, Wish } from './types';
+export interface Country { flag: string; name: string; code: string; }
 
 export const COUNTRIES: Country[] = [
-  {flag:"🇸🇦",name:"Saudi Arabia"},{flag:"🇹🇷",name:"Turkey"},{flag:"🇮🇩",name:"Indonesia"},
-  {flag:"🇵🇰",name:"Pakistan"},{flag:"🇧🇩",name:"Bangladesh"},{flag:"🇪🇬",name:"Egypt"},
-  {flag:"🇳🇬",name:"Nigeria"},{flag:"🇲🇾",name:"Malaysia"},{flag:"🇮🇷",name:"Iran"},
-  {flag:"🇩🇿",name:"Algeria"},{flag:"🇲🇦",name:"Morocco"},{flag:"🇬🇧",name:"UK"},
-  {flag:"🇺🇸",name:"USA"},{flag:"🇫🇷",name:"France"},{flag:"🇩🇪",name:"Germany"},
-  {flag:"🇸🇳",name:"Senegal"},{flag:"🇯🇴",name:"Jordan"},{flag:"🇦🇪",name:"UAE"},
-  {flag:"🇰🇲",name:"Comoros"},{flag:"🇱🇧",name:"Lebanon"},{flag:"🇸🇴",name:"Somalia"},
-  {flag:"🇸🇩",name:"Sudan"},{flag:"🇾🇪",name:"Yemen"},{flag:"🇱🇾",name:"Libya"},
-  {flag:"🇹🇳",name:"Tunisia"},{flag:"🇦🇫",name:"Afghanistan"},{flag:"🇺🇿",name:"Uzbekistan"},
-  {flag:"🇰🇿",name:"Kazakhstan"},{flag:"🇦🇿",name:"Azerbaijan"},{flag:"🇰🇬",name:"Kyrgyzstan"},
-  {flag:"🇹🇯",name:"Tajikistan"},{flag:"🇮🇶",name:"Iraq"},{flag:"🇸🇾",name:"Syria"},
-  {flag:"🇶🇦",name:"Qatar"},{flag:"🇧🇭",name:"Bahrain"},{flag:"🇴🇲",name:"Oman"},
-  {flag:"🇰🇼",name:"Kuwait"},{flag:"🇮🇳",name:"India"},{flag:"🇨🇳",name:"China"},
+  { flag: '🇸🇦', name: 'Saudi Arabia', code: 'SA' },
+  { flag: '🇹🇷', name: 'Turkey', code: 'TR' },
+  { flag: '🇮🇩', name: 'Indonesia', code: 'ID' },
+  { flag: '🇵🇰', name: 'Pakistan', code: 'PK' },
+  { flag: '🇧🇩', name: 'Bangladesh', code: 'BD' },
+  { flag: '🇪🇬', name: 'Egypt', code: 'EG' },
+  { flag: '🇳🇬', name: 'Nigeria', code: 'NG' },
+  { flag: '🇲🇾', name: 'Malaysia', code: 'MY' },
+  { flag: '🇮🇷', name: 'Iran', code: 'IR' },
+  { flag: '🇩🇿', name: 'Algeria', code: 'DZ' },
+  { flag: '🇲🇦', name: 'Morocco', code: 'MA' },
+  { flag: '🇬🇧', name: 'UK', code: 'GB' },
+  { flag: '🇺🇸', name: 'USA', code: 'US' },
+  { flag: '🇫🇷', name: 'France', code: 'FR' },
+  { flag: '🇩🇪', name: 'Germany', code: 'DE' },
+  { flag: '🇸🇳', name: 'Senegal', code: 'SN' },
+  { flag: '🇯🇴', name: 'Jordan', code: 'JO' },
+  { flag: '🇦🇪', name: 'UAE', code: 'AE' },
+  { flag: '🇰🇲', name: 'Comoros', code: 'KM' },
+  { flag: '🇱🇧', name: 'Lebanon', code: 'LB' },
+  { flag: '🇸🇴', name: 'Somalia', code: 'SO' },
+  { flag: '🇸🇩', name: 'Sudan', code: 'SD' },
+  { flag: '🇾🇪', name: 'Yemen', code: 'YE' },
+  { flag: '🇱🇾', name: 'Libya', code: 'LY' },
+  { flag: '🇹🇳', name: 'Tunisia', code: 'TN' },
+  { flag: '🇦🇫', name: 'Afghanistan', code: 'AF' },
+  { flag: '🇺🇿', name: 'Uzbekistan', code: 'UZ' },
+  { flag: '🇰🇿', name: 'Kazakhstan', code: 'KZ' },
+  { flag: '🇦🇿', name: 'Azerbaijan', code: 'AZ' },
+  { flag: '🇰🇬', name: 'Kyrgyzstan', code: 'KG' },
+  { flag: '🇹🇯', name: 'Tajikistan', code: 'TJ' },
+  { flag: '🇮🇶', name: 'Iraq', code: 'IQ' },
+  { flag: '🇸🇾', name: 'Syria', code: 'SY' },
+  { flag: '🇶🇦', name: 'Qatar', code: 'QA' },
+  { flag: '🇧🇭', name: 'Bahrain', code: 'BH' },
+  { flag: '🇴🇲', name: 'Oman', code: 'OM' },
+  { flag: '🇰🇼', name: 'Kuwait', code: 'KW' },
+  { flag: '🇮🇳', name: 'India', code: 'IN' },
+  { flag: '🇨🇳', name: 'China', code: 'CN' },
 ];
 
 export const LOCATIONS = [
@@ -33,6 +59,19 @@ export const LOCATION_OPTIONS = LOCATIONS.map(l => {
 
 export const EMOJI_OPTIONS = ['🌙', '✨', '🤲', '❤️', '🕌'];
 
+interface Wish {
+  id: number;
+  name: string;
+  loc: string;
+  text: string;
+  arabic?: string;
+  time: string;
+  reactions: Record<string, number>;
+  color: string;
+  accent: string;
+}
+
+// Seed data — kept as static fallback for initial render
 export const MESSAGES: Wish[] = [
   {
     id:1, name:"Fatima Al-Rashidi", loc:"🇸🇦 Saudi Arabia",
@@ -94,11 +133,6 @@ export const MESSAGES: Wish[] = [
     text:"Eid Mubarak from Dhaka! The city is glowing tonight — white kurtas, the smell of sheer khurma, children laughing in the streets. 🕌 This is what joy feels like.",
     time:"45m ago", reactions:{"🕌":13,"🌙":22,"✨":15}, color:"#0a1a3a", accent:"#4070b0"
   },
-];
-
-export const INCOMING_MESSAGES: Wish[] = [
-  { id:200, name:"Mariam Al-Farsi", loc:"🇴🇲 Oman", text:"Eid Mubarak from Muscat! 🌙 The mountains are silent tonight but my heart sings with joy.", time:"just now", reactions:{"🌙":1,"✨":0}, color:"#1a3a2a", accent:"#4db890" },
-  { id:201, name:"Bilal Toure",    loc:"🇲🇱 Mali",  text:"Eid Mubarak! Celebrating with the whole village today — music, prayer, and so much food. ✨", time:"just now", reactions:{"✨":2,"❤️":1}, color:"#3a2a0a", accent:"#c0a040" },
 ];
 
 export const AVATAR_COLORS = [

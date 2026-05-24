@@ -1,34 +1,7 @@
-export interface Country {
-  flag: string;
-  name: string;
-}
-
-export interface Wish {
-  id: number;
-  name: string;
-  loc: string;
-  text: string;
-  arabic?: string;
-  time: string;
-  reactions: Record<string, number>;
-  color: string;
-  accent: string;
-}
-
-export type WishFilter = 'all' | 'recent' | 'popular';
-
-export interface CreateWishPayload {
-  text: string;
-  location: string;
-}
-
-export interface WishesResponse {
-  wishes: Wish[];
-  total: number;
-}
-
-export interface StatsResponse {
-  liveCount: number;
-  wishCount: number;
-  countriesCount: number;
-}
+export type { Country } from './constants';
+export type { FeedSortMode, ThemeMode } from './ui-types';
+export type { ApiSuccessResponse, ApiErrorResponse, ApiResponse, PaginatedResponse } from './api-types';
+export type { Message, FeedMessage, ReactionAggregate } from '../domains/messages/types/types';
+export type { Reaction, ReactionCount } from '../domains/reactions/types/types';
+export type { GlobalStats, CountryStat, ReactionStat } from '../domains/stats/types/types';
+export type { DbUser, DbMessage, DbReaction, DbMessageInsert, DbReactionInsert } from '../domains/messages/types/types-db';

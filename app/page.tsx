@@ -2,23 +2,24 @@
 
 import { useCallback } from 'react';
 import styles from './Home.module.scss';
-import AtmosphericBackground from '@/components/atmospheric/AtmosphericBackground';
-import GrainOverlay from '@/components/atmospheric/GrainOverlay';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import HeroSection from '@/components/sections/Hero/HeroSection';
-import CountriesTicker from '@/components/sections/CountriesTicker/CountriesTicker';
-import ComposeSection from '@/components/sections/Compose/ComposeSection';
-import FeedSection from '@/components/sections/Feed/FeedSection';
-import Footer from '@/components/layout/Footer/Footer';
-import { ToastProvider } from '@/components/ui/Toast/ToastProvider';
-import { useLiveCount } from '@/hooks/useLiveCount';
-import { useWishes } from '@/hooks/useWishes';
+import AtmosphericBackground from '@/domains/atmospheric/components/AtmosphericBackground';
+import GrainOverlay from '@/domains/atmospheric/components/GrainOverlay';
+import Navbar from '@/domains/ui/components/Navbar/Navbar';
+import HeroSection from '@/domains/hero/components/HeroSection/HeroSection';
+import CountriesTicker from '@/domains/ui/components/CountriesTicker/CountriesTicker';
+import ComposeSection from '@/domains/messages/components/ComposeSection/ComposeSection';
+import FeedSection from '@/domains/messages/components/FeedSection/FeedSection';
+import Footer from '@/domains/ui/components/Footer/Footer';
+import { ToastProvider } from '@/domains/ui/components/Toast/ToastProvider';
 import { useToast } from '@/hooks/useToast';
+import { useStatsQuery } from '@/domains/stats/query/queries';
+import { useCelebrationStore } from '@/domains/ui/store/celebration-store';
 
 function HomeContent() {
-  const { liveCount, wishCount, countriesCount } = useLiveCount();
-  const { wishes, showNewBadge, addWish, setFilter } = useWishes();
+  const { data: stats } = useStatsQuery();
+  const showNewBadge = useCelebrationStore((s) => s.showNewBadge);
   const { show } = useToast();
+  const dismissedBadge = useCelebrationStore((s) => s.dismissedBadge);
 
   const handleShare = useCallback(() => {
     const el = document.querySelector('.compose-section');
@@ -28,8 +29,7 @@ function HomeContent() {
   }, []);
 
   const handleSend = useCallback(
-    (text: string, location: string) => {
-      addWish(text, location);
+    (_text: string, _location: string) => {
       show('🌙', 'Your wish has joined the world tonight!');
 
       setTimeout(() => {
@@ -38,31 +38,24 @@ function HomeContent() {
           feed.scrollIntoView({ behavior: 'smooth' });
         }
       }, 300);
+
+      dismissedBadge();
     },
-    [addWish, show],
+    [show, dismissedBadge],
   );
 
   return (
     <div className={styles.app}>
-      <Navbar liveCount={liveCount} />
-
+      <Navbar liveCount={stats?.totalMessages ?? 0} />
       <HeroSection
-        liveCount={liveCount}
-        wishCount={wishCount}
-        countriesCount={countriesCount}
+        liveCount={stats?.totalReactions ?? 0}
+        wishCount={stats?.totalMessages ?? 0}
+        countriesCount={stats?.countriesCelebrating ?? 0}
         onShareClick={handleShare}
       />
-
       <CountriesTicker />
-
       <ComposeSection onSend={handleSend} />
-
-      <FeedSection
-        wishes={wishes}
-        showNewBadge={showNewBadge}
-        onFilterChange={setFilter}
-      />
-
+      <FeedSection showNewBadge={showNewBadge} />
       <Footer />
     </div>
   );
