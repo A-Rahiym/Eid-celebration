@@ -247,3 +247,21 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 0.5rem;
+  }
+
+  .navRight {
+    gap: 0.4rem;
+  }
+
+  .liveBadge span {
+    display: none;
+  }
+
+  .countNum {
+    font-size: 0.85rem;
+  }
+}

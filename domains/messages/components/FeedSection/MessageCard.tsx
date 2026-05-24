@@ -5,6 +5,7 @@ import { getFlagEmoji, getCountryName } from '@/lib/utils';
 import styles from './FeedSection.module.scss';
 import CardAvatar from './CardAvatar';
 import ReactionButton from './ReactionButton';
+import CornerRosette from '@/domains/ui/components/icons/CornerRosette';
 
 const AVATAR_COLORS = [
   '#1c4a3a', '#2a1a4a', '#1a3a2a', '#3a2a0a',
@@ -53,17 +54,22 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
     <article
       className={styles.card}
       style={{
+        ['--card-accent' as string]: accent,
         animation: isNew
           ? 'newCardPop 0.6s cubic-bezier(0.34,1.56,0.64,1) both'
           : undefined,
         ...style,
       }}
     >
-      <div className={styles.cardGlow} />
-      <div
-        className={styles.accentLine}
-        style={{ background: accent }}
-      />
+      <CornerRosette className={styles.cardCornerTL} />
+      <CornerRosette className={styles.cardCornerTR} />
+      <CornerRosette className={styles.cardCornerBL} />
+      <CornerRosette className={styles.cardCornerBR} />
+
+      <div className={styles.bottomLine} aria-hidden="true" />
+      <div className={styles.sideL} aria-hidden="true" />
+      <div className={styles.sideR} aria-hidden="true" />
+      <div className={styles.diamond} aria-hidden="true" />
 
       <div className={styles.cardHead}>
         <CardAvatar name={msg.display_name} color={color} accent={accent} />

@@ -5,6 +5,8 @@ import styles from './ComposeSection.module.scss';
 import SectionHeader from '@/domains/ui/components/SectionHeader/SectionHeader';
 import Container from '@/domains/ui/components/Container/Container';
 import ComposeCard from './ComposeCard';
+import MandalaRosette from '@/domains/ui/components/icons/MandalaRosette';
+import StarMedallion from '@/domains/ui/components/icons/StarMedallion';
 
 interface ComposeSectionProps {
   onSend: (text: string, location: string) => void;
@@ -13,7 +15,7 @@ interface ComposeSectionProps {
 export default function ComposeSection({ onSend }: ComposeSectionProps) {
   return (
     <section className={styles.section} aria-labelledby="compose-heading">
-      <Container maxWidth="700px">
+      <Container maxWidth="760px">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +26,37 @@ export default function ComposeSection({ onSend }: ComposeSectionProps) {
             title="Share Your Eid Blessing"
             subtitle="Your wish joins millions around the world tonight"
           />
-          <ComposeCard onSend={onSend} />
+          <div className={styles.mandala} aria-hidden="true">
+            <MandalaRosette className={`${styles.mfCorner} ${styles.tl}`} />
+            <MandalaRosette className={`${styles.mfCorner} ${styles.tr}`} />
+            <MandalaRosette className={`${styles.mfCorner} ${styles.bl}`} />
+            <MandalaRosette className={`${styles.mfCorner} ${styles.br}`} />
+
+            <div className={`${styles.mfEdge} ${styles.top}`}>
+              <div className={styles.mfEdgeInner}>
+                <div className={styles.mfEdgeLine} />
+                <StarMedallion className={styles.mfStar} />
+                <div className={`${styles.mfEdgeLine} ${styles.mfMirror}`} />
+              </div>
+            </div>
+
+            <div className={`${styles.mfEdge} ${styles.bottom}`}>
+              <div className={styles.mfEdgeInner}>
+                <div className={styles.mfEdgeLine} />
+                <StarMedallion className={styles.mfStar} dark />
+                <div className={`${styles.mfEdgeLine} ${styles.mfMirror}`} />
+              </div>
+            </div>
+
+            <div className={`${styles.mfSide} ${styles.left}`}>
+              <div className={styles.mfSideLine} />
+            </div>
+            <div className={`${styles.mfSide} ${styles.right}`}>
+              <div className={styles.mfSideLine} />
+            </div>
+
+            <ComposeCard onSend={onSend} />
+          </div>
         </motion.div>
       </Container>
     </section>
