@@ -172,6 +172,20 @@
   font-weight: 500;
   color: var(--teal);
   flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .nameRow {
@@ -182,21 +196,86 @@
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--ivory);
+  margin-bottom: 0.2rem;
+}
+
+.selectRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.selectWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .locationSelect {
-  background: transparent;
-  border: none;
-  outline: none;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.3rem 1.6rem 0.3rem 0.7rem;
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 0.7rem;
   color: var(--ivory-50);
   cursor: pointer;
-  margin-top: 2px;
   appearance: none;
   -webkit-appearance: none;
-  padding-right: 14px;
-  max-width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+  min-height: 32px;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  &:focus {
+    border-color: rgba(201,169,110,0.4);
+  }
+}
+
+.chevron {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ivory-30);
+  pointer-events: none;
+}
+
+.genderGroup {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.genderBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 0.62rem;
+  color: var(--ivory-40);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 28px;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.15);
+    color: var(--ivory-70);
+  }
+}
+
+.genderActive {
+  border-color: rgba(201,169,110,0.35);
+  background: var(--gold-glow-sm);
+  color: var(--gold-pale);
 }
 
 .body {
@@ -273,6 +352,24 @@
   color: var(--ivory-25);
 }
 
+.sendWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.rosette {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.rosetteTL { top: -10px; left: -10px; }
+.rosetteTR { top: -10px; right: -10px; transform: scaleX(-1); }
+.rosetteBL { bottom: -10px; left: -10px; transform: scaleY(-1); }
+.rosetteBR { bottom: -10px; right: -10px; transform: scale(-1,-1); }
+
 .sendBtn {
   display: inline-flex;
   align-items: center;
@@ -320,6 +417,18 @@
 
   .locationSelect {
     font-size: 0.62rem;
+    min-height: 28px;
+  }
+
+  .genderBtn {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.5rem;
+    min-height: 24px;
+  }
+
+  .genderBtn svg {
+    width: 12px;
+    height: 12px;
   }
 
   .textarea {
@@ -340,6 +449,16 @@
     padding: 0.4rem 1rem;
     min-height: 36px;
   }
+
+  .rosette {
+    width: 16px;
+    height: 16px;
+  }
+
+  .rosetteTL { top: -8px; left: -8px; }
+  .rosetteTR { top: -8px; right: -8px; }
+  .rosetteBL { bottom: -8px; left: -8px; }
+  .rosetteBR { bottom: -8px; right: -8px; }
 
   .charCount {
     font-size: 0.6rem;

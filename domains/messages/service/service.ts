@@ -3,6 +3,7 @@ import { MessageRepository } from '@/domains/messages/repository/repository';
 import { UserRepository } from '@/domains/messages/repository/user-repository';
 import { validateMessage, validateDisplayName, isSpam } from '@/domains/messages/validator/validator';
 import { generateIdentity } from '@/lib/identity';
+import { pickAvatar } from '@/lib/avatar';
 import type { FeedMessage } from '@/lib/types';
 
 export class MessageService {
@@ -19,6 +20,7 @@ export class MessageService {
     countryCode: string;
     messageText: string;
     userId?: string;
+    avatarSeed?: string;
   }) {
     const validation = validateMessage(params.messageText, params.countryCode);
     if (!validation.valid) {
@@ -36,12 +38,13 @@ export class MessageService {
 
     const userId = params.userId || crypto.randomUUID();
     const displayName = params.displayName?.trim() || generateIdentity(userId);
+    const avatarSeed = params.avatarSeed || pickAvatar(userId);
 
     await this.userRepo.upsert({
       id: userId,
       display_name: displayName,
       country_code: params.countryCode,
-      avatar_seed: userId,
+      avatar_seed: avatarSeed,
     }).catch(() => {});
 
     const message = await this.messageRepo.insert({
@@ -49,6 +52,7 @@ export class MessageService {
       display_name: displayName,
       country_code: params.countryCode,
       message_text: validation.sanitized,
+      avatar_seed: avatarSeed,
     });
 
     return message;

@@ -17,7 +17,8 @@ export default function ComposeSection({ onSend }: ComposeSectionProps) {
   const {
     text, setText,
     location, setLocation,
-    insertEmoji, handleSend, isPending, textareaRef,
+    gender, setGender,
+    insertEmoji, handleSend, isPending, textareaRef, avatarSeed, cycleAvatar,
   } = useMessageComposer(onSend);
 
   return (
@@ -67,10 +68,14 @@ export default function ComposeSection({ onSend }: ComposeSectionProps) {
               onTextChange={setText}
               location={location}
               onLocationChange={setLocation}
+              gender={gender}
+              onGenderChange={setGender}
               insertEmoji={insertEmoji}
               handleSend={handleSend}
               isPending={isPending}
               textareaRef={textareaRef}
+              avatarSeed={avatarSeed}
+              cycleAvatar={cycleAvatar}
             />
           </div>
         </motion.div>

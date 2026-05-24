@@ -13,8 +13,11 @@ export interface DbMessage {
   country_code: string;
   message_text: string;
   is_flagged: boolean;
+  avatar_seed: string;
   created_at: string;
 }
+
+export type DbMessageInsert = Omit<DbMessage, 'id' | 'is_flagged' | 'created_at'>;
 
 export interface DbReaction {
   id: string;
@@ -24,5 +27,4 @@ export interface DbReaction {
   created_at: string;
 }
 
-export type DbMessageInsert = Omit<DbMessage, 'id' | 'is_flagged' | 'created_at'>;
 export type DbReactionInsert = Omit<DbReaction, 'id' | 'created_at'>;

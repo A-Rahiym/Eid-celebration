@@ -8,6 +8,7 @@ interface CreateMessageInput {
   countryCode: string;
   messageText: string;
   userId?: string;
+  avatarSeed?: string;
 }
 
 export function useCreateMessageMutation() {
@@ -23,6 +24,7 @@ export function useCreateMessageMutation() {
           countryCode: input.countryCode,
           displayName: input.displayName,
           userId: input.userId || undefined,
+          avatarSeed: input.avatarSeed || undefined,
         }),
       });
 

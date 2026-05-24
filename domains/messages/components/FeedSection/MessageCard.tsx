@@ -48,6 +48,7 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
   const country = getCountryName(msg.country_code);
   const color = colorFromSeed(msg.user_id, AVATAR_COLORS);
   const accent = colorFromSeed(msg.user_id, ACCENT_COLORS);
+  const avatarSeed = msg.avatar_seed;
   const time = formatTime(msg.created_at);
 
   return (
@@ -72,7 +73,7 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
       <div className={styles.diamond} aria-hidden="true" />
 
       <div className={styles.cardHead}>
-        <CardAvatar name={msg.display_name} color={color} accent={accent} />
+        <CardAvatar name={msg.display_name} avatarSeed={avatarSeed} color={color} accent={accent} />
         <div className={styles.cardInfo}>
           <div className={styles.cardName}>
             {msg.display_name}

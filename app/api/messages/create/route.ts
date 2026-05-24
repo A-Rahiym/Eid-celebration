@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
       countryCode: string;
       messageText: string;
       userId?: string;
+      avatarSeed?: string;
     }>(request);
 
     const db = await createAdminClient();
@@ -29,6 +30,7 @@ export async function POST(request: NextRequest) {
       countryCode: body.countryCode,
       messageText: sanitizedText,
       userId: body.userId,
+      avatarSeed: body.avatarSeed,
     });
     return success(message, 201);
   } catch (e) {

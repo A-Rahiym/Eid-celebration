@@ -5,6 +5,7 @@ export interface Message {
   country_code: string;
   message_text: string;
   is_flagged: boolean;
+  avatar_seed: string;
   created_at: string;
 }
 

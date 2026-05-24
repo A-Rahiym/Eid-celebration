@@ -183,12 +183,20 @@
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.06);
   letter-spacing: 0.02em;
+  overflow: hidden;
 
   @media (max-width: 480px) {
     width: 30px;
     height: 30px;
     font-size: 0.55rem;
   }
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .cardInfo {
