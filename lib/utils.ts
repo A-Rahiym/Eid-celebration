@@ -1,5 +1,3 @@
-import { COUNTRIES } from './constants';
-
 export function getInitials(name: string): string {
   return name.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
 }
@@ -17,8 +15,7 @@ export function getFlagEmoji(countryCode: string): string {
       .map((c) => 0x1F1E6 + c.charCodeAt(0) - 65);
     return String.fromCodePoint(...codePoints);
   }
-  const country = COUNTRIES.find((c) => c.code === countryCode);
-  return country?.flag || '🌍';
+  return '🌍';
 }
 
 export function getCountryName(code: string, locale?: string): string {
@@ -31,8 +28,7 @@ export function getCountryName(code: string, locale?: string): string {
       return code;
     }
   }
-  const country = COUNTRIES.find((c) => c.code === code);
-  return country?.code || code;
+  return code;
 }
 
 export function formatRelativeTime(iso: string, locale?: string): string {

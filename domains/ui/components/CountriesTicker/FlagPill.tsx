@@ -1,17 +1,16 @@
-import type { Country } from '@/lib/types';
-import { getCountryName } from '@/lib/utils';
+import { getCountryName, getFlagEmoji } from '@/lib/utils';
 import styles from './CountriesTicker.module.scss';
 
 interface FlagPillProps {
-  country: Country;
+  countryCode: string;
   locale: string;
 }
 
-export default function FlagPill({ country, locale }: FlagPillProps) {
+export default function FlagPill({ countryCode, locale }: FlagPillProps) {
   return (
     <div className={styles.pill}>
-      <span>{country.flag}</span>
-      <span>{getCountryName(country.code, locale)}</span>
+      <span>{getFlagEmoji(countryCode)}</span>
+      <span>{getCountryName(countryCode, locale)}</span>
     </div>
   );
 }

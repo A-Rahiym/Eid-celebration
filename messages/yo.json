@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "Eid Pọ̀ — Odi Ayẹyẹ Àgbáyé",
+    "description": "Kí ló dé tí a fi máa ṣe ayẹyẹ ní ìkanra nígbà tí ọ̀pọ̀lọpọ̀ ènìyàn káàkiri ayé ń pín ìgbà mímọ́ yìí? Òru kan, oṣù kan, ayẹyẹ kan — pọ̀.",
+    "ogTitle": "Eid Pọ̀ — Odi Ayẹyẹ Àgbáyé",
+    "ogDescription": "Pín ẹ̀kúnrẹ́rẹ́ Eid rẹ̀ pẹ̀lú ayé. Òru kan, oṣù kan, ayẹyẹ kan — pọ̀."
+  },
+  "nav": {
+    "aria": "Ìlúmọ̀ọ́kàn ìrìnàjò",
+    "home": "Ilé",
+    "wall": "Odi",
+    "shareWish": "Pín Ẹ̀kúnrẹ́rẹ́",
+    "brand": "Eid Pọ̀",
+    "tagline": "Odi Ayẹyẹ Àgbáyé",
+    "homeAria": "Padà sí ilé Eid Pọ̀",
+    "openMenu": "Ṣí akojọ",
+    "closeMenu": "Tì akojọ",
+    "mobileAria": "Ìrìnàjò alágbèéká"
+  },
+  "language": {
+    "aria": "Yí èdè padà"
+  },
+  "hero": {
+    "eyebrow": "Eid Al-Fitr · 1446 AH",
+    "title": "Ṣe Ayẹyẹ Eid",
+    "titleAccent": "Pẹ̀lú Ayé",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak ní èdè Arabic",
+    "subtitle": "Kí ló dé tí a fi máa ṣe ayẹyẹ ní ìkanra nígbà tí ọ̀pọ̀lọpọ̀ ènìyàn káàkiri ayé ń pín ìgbà mímọ́ yìí? Òru kan, oṣù kan, ayẹyẹ kan — pọ̀.",
+    "shareCta": "Pín Ẹ̀kúnrẹ́rẹ́ Rẹ ✨",
+    "exploreCta": "Ṣàwárí Odi",
+    "shareAria": "Pín ẹ̀kúnrẹ́rẹ́ Eid rẹ",
+    "exploreAria": "Ṣàwárí odi ayẹyẹ",
+    "scroll": "Rọ̀ọ́"
+  },
+  "heroStats": {
+    "aria": "Ìṣirò ayẹyẹ",
+    "celebratingNow": "Ń ṣe ayẹyẹ báyìí",
+    "countries": "Orílẹ̀-èdè",
+    "wishesShared": "Ẹ̀kúnrẹ́rẹ́ tí a pín"
+  },
+  "countries": {
+    "aria": "Orílẹ̀-èdè tó ń ṣe ayẹyẹ Eid",
+    "label": "A ń ṣe ayẹyẹ káàkiri ayé · orílẹ̀-èdè {count, number}"
+  },
+  "compose": {
+    "sectionTitle": "Pín Ìbùkún Eid Rẹ",
+    "sectionSubtitle": "Ẹ̀kúnrẹ́rẹ́ rẹ ń darapọ̀ mọ́ ọ̀pọ̀lọpọ̀ ènìyàn káàkiri ayé lálẹ́ yìí",
+    "formLabel": "Pín ẹ̀kúnrẹ́rẹ́ Eid",
+    "changeAvatar": "Yí àwòrán padà",
+    "title": "Ẹ̀kúnrẹ́rẹ́ Eid Rẹ",
+    "selectCountry": "Yan orílẹ̀-èdè rẹ",
+    "searchCountry": "Wá orílẹ̀-èdè",
+    "selectGender": "Yan akọ/abo rẹ",
+    "avatarHint": "Fọwọ́ kan àwòrán láti yí avatar padà",
+    "genderHint": "Fọwọ́ kan láti yí akọ/abo padà",
+    "brother": "Arákùnrin",
+    "sister": "Arábìnrin",
+    "you": "Ìwọ",
+    "everywhere": "Ní gbogbo ibi",
+    "placeholder": "Pín ìbùkún Eid rẹ pẹ̀lú ayé lálẹ́ yìí…",
+    "textareaLabel": "Kọ ẹ̀kúnrẹ́rẹ́ Eid rẹ",
+    "emojiRowLabel": "Fi emoji kún ìránṣẹ́",
+    "emojiButtonLabel": "Fi emoji {emoji} kún",
+    "sendAria": "Rán ẹ̀kúnrẹ́rẹ́ Eid rẹ",
+    "send": "Rán Ẹ̀kúnrẹ́rẹ́ →",
+    "sending": "Ń ránṣẹ́…"
+  },
+  "feed": {
+    "heading": "Ẹ̀kúnrẹ́rẹ́ láti ayé",
+    "new": "Tuntun",
+    "filtersAria": "Ṣe àlẹ́mọ́ ẹ̀kúnrẹ́rẹ́",
+    "filters": {
+      "newest": "Tó tuntun jù",
+      "popular": "Olókìkí",
+      "trending": "Tó ń gbilẹ̀"
+    },
+    "reactionsAria": "Ìdáhùn",
+    "reactionAria": "Fèsì pẹ̀lú {emoji}, ìdáhùn {count}",
+    "moreOptions": "Àwọn aṣayan míì",
+    "everywhere": "Ní gbogbo ibi"
+  },
+  "toast": {
+    "sendSuccess": "Ẹ̀kúnrẹ́rẹ́ rẹ ti darapọ̀ mọ́ ayé lálẹ́ yìí!",
+    "sendError": "A kò lè rán ẹ̀kúnrẹ́rẹ́ rẹ. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kàn síi."
+  },
+  "loading": {
+    "label": "A ń ṣe ayẹyẹ pọ̀ ✨"
+  },
+  "footer": {
+    "brand": "Eid Pọ̀",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · A ń ṣe ayẹyẹ ènìyàn · Eid gbogbo, káàkiri ayé"
+  }
+}

@@ -50,7 +50,10 @@
     "changeAvatar": "Change avatar",
     "title": "Your Eid Wish",
     "selectCountry": "Select your country",
+    "searchCountry": "Search country",
     "selectGender": "Select your gender",
+    "avatarHint": "Tap image to change avatar",
+    "genderHint": "Select gender",
     "brother": "Brother",
     "sister": "Sister",
     "you": "You",
@@ -60,7 +63,7 @@
     "emojiRowLabel": "Add emoji to message",
     "emojiButtonLabel": "Add {emoji} emoji",
     "sendAria": "Send your Eid wish",
-    "send": "Send Wish →",
+    "send": "Send Wish",
     "sending": "Sending…"
   },
   "feed": {

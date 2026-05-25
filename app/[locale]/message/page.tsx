@@ -13,7 +13,7 @@ export default function MessagePage() {
   const dismissedBadge = useCelebrationStore((s) => s.dismissedBadge);
   const router = useRouter();
 
-  const handleSend = (_text: string, _location: string) => {
+  const handleSend = () => {
     show('🌙', t('sendSuccess'));
 
     setTimeout(() => {

@@ -1,20 +1,5 @@
-export const COUNTRY_OPTIONS = [
-  { code: '', flag: '🌍' },
-  { code: 'SA', flag: '🇸🇦' },
-  { code: 'EG', flag: '🇪🇬' },
-  { code: 'ID', flag: '🇮🇩' },
-  { code: 'PK', flag: '🇵🇰' },
-  { code: 'BD', flag: '🇧🇩' },
-  { code: 'TR', flag: '🇹🇷' },
-  { code: 'NG', flag: '🇳🇬' },
-  { code: 'MY', flag: '🇲🇾' },
-  { code: 'DZ', flag: '🇩🇿' },
-  { code: 'MA', flag: '🇲🇦' },
-  { code: 'IR', flag: '🇮🇷' },
-  { code: 'JO', flag: '🇯🇴' },
-  { code: 'GB', flag: '🇬🇧' },
-  { code: 'US', flag: '🇺🇸' },
-  { code: 'FR', flag: '🇫🇷' },
-  { code: 'DE', flag: '🇩🇪' },
-  { code: 'SN', flag: '🇸🇳' },
-];
+import { WORLD_COUNTRY_CODES } from '@/lib/countries';
+
+export const GLOBAL_COUNTRY_CODE = 'XX';
+
+export const COUNTRY_CODES = WORLD_COUNTRY_CODES;

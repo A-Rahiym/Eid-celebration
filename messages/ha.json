@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "Eid Tare — Ganuwar Bikin Duniya",
+    "description": "Me ya sa za a yi biki kai kaɗai alhali miliyoyi a fadin duniya suna raba wannan lokaci mai albarka? Dare ɗaya, wata ɗaya, biki ɗaya — tare.",
+    "ogTitle": "Eid Tare — Ganuwar Bikin Duniya",
+    "ogDescription": "Raba gaisuwar Eid ɗinka da duniya. Dare ɗaya, wata ɗaya, biki ɗaya — tare."
+  },
+  "nav": {
+    "aria": "Babban kewayawa",
+    "home": "Gida",
+    "wall": "Ganuwa",
+    "shareWish": "Raba Gaisuwa",
+    "brand": "Eid Tare",
+    "tagline": "Ganuwar Bikin Duniya",
+    "homeAria": "Komawa gida na Eid Tare",
+    "openMenu": "Buɗe menu",
+    "closeMenu": "Rufe menu",
+    "mobileAria": "Kewayawa ta wayar hannu"
+  },
+  "language": {
+    "aria": "Canja harshe"
+  },
+  "hero": {
+    "eyebrow": "Eid Al-Fitr · 1446 AH",
+    "title": "Ku Yi Bikin Eid",
+    "titleAccent": "Tare da Duniya",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak a Larabci",
+    "subtitle": "Me ya sa za a yi biki kai kaɗai alhali miliyoyi a fadin duniya suna raba wannan lokaci mai albarka? Dare ɗaya, wata ɗaya, biki ɗaya — tare.",
+    "shareCta": "Raba Gaisuwarka ✨",
+    "exploreCta": "Bincika Ganuwar",
+    "shareAria": "Raba gaisuwar Eid ɗinka",
+    "exploreAria": "Bincika ganuwar bikin",
+    "scroll": "Gungura"
+  },
+  "heroStats": {
+    "aria": "Kididdigar bikin",
+    "celebratingNow": "Masu biki yanzu",
+    "countries": "Kasashe",
+    "wishesShared": "Gaisuwa da aka raba"
+  },
+  "countries": {
+    "aria": "Kasashen da ke bikin Eid",
+    "label": "Ana bikin a fadin duniya · kasashe {count, number}"
+  },
+  "compose": {
+    "sectionTitle": "Raba Albarkar Eid",
+    "sectionSubtitle": "Gaisuwarka ta hada kai da miliyoyi a duniya yau da dare",
+    "formLabel": "Raba gaisuwar Eid",
+    "changeAvatar": "Canja hoto",
+    "title": "Gaisuwar Eid ɗinka",
+    "selectCountry": "Zaɓi ƙasarka",
+    "searchCountry": "Nemo ƙasa",
+    "selectGender": "Zaɓi jinsinka",
+    "avatarHint": "Taɓa hoto don canja hoto",
+    "genderHint": "Taɓa don canja jinsi",
+    "brother": "Ɗan’uwa namiji",
+    "sister": "Ɗan’uwa mace",
+    "you": "Kai",
+    "everywhere": "Ko’ina",
+    "placeholder": "Raba albarkar Eid ɗinka da duniya yau da dare…",
+    "textareaLabel": "Rubuta gaisuwar Eid ɗinka",
+    "emojiRowLabel": "Ƙara emoji a saƙo",
+    "emojiButtonLabel": "Ƙara emoji {emoji}",
+    "sendAria": "Aika gaisuwar Eid ɗinka",
+    "send": "Aika Gaisuwa →",
+    "sending": "Ana aikawa…"
+  },
+  "feed": {
+    "heading": "Gaisuwa daga Duniya",
+    "new": "Sabon",
+    "filtersAria": "Tace gaisuwa",
+    "filters": {
+      "newest": "Sabbi",
+      "popular": "Masu shahara",
+      "trending": "Masu tashe"
+    },
+    "reactionsAria": "Martani",
+    "reactionAria": "Ba da martani da {emoji}, martani {count}",
+    "moreOptions": "Karin zaɓuɓɓuka",
+    "everywhere": "Ko’ina"
+  },
+  "toast": {
+    "sendSuccess": "Gaisuwarka ta shiga duniya yau da dare!",
+    "sendError": "An kasa aika gaisuwarka. A sake gwadawa."
+  },
+  "loading": {
+    "label": "Muna biki tare ✨"
+  },
+  "footer": {
+    "brand": "Eid Tare",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · Muna bikin ɗan Adam · Kowane Eid, a ko’ina"
+  }
+}

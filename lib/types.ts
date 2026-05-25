@@ -1,4 +1,3 @@
-export type { Country } from './constants';
 export type { FeedSortMode, ThemeMode } from './ui-types';
 export type { ApiSuccessResponse, ApiErrorResponse, ApiResponse, PaginatedResponse } from './api-types';
 export type { Message, FeedMessage, ReactionAggregate } from '../domains/messages/types/types';

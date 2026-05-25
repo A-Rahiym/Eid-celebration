@@ -11,6 +11,9 @@ const LOCALES = [
   { locale: 'fr', label: 'FR', icon: '✨' },
   { locale: 'tr', label: 'TR', icon: '🕌' },
   { locale: 'id', label: 'ID', icon: '🌿' },
+  { locale: 'ha', label: 'HA', icon: '🌍' },
+  { locale: 'ig', label: 'IG', icon: '🌍' },
+  { locale: 'yo', label: 'YO', icon: '🌍' },
 ];
 
 export default function LanguageSwitcher() {

@@ -157,9 +157,23 @@
   margin-bottom: 1rem;
 }
 
+.avatarWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hintText {
+  font-size: 0.62rem;
+  color: var(--ivory-25);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--emerald), #0d3028);
   border: 1px solid rgba(61, 184, 156, 0.25);
@@ -204,6 +218,113 @@
   flex-wrap: wrap;
 }
 
+.locationGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 200px;
+  position: relative;
+}
+
+.locationTrigger {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.3rem 1.6rem 0.3rem 0.7rem;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 0.7rem;
+  color: var(--ivory-50);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  text-align: start;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  &:focus {
+    border-color: rgba(201,169,110,0.4);
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  inset-inline-start: 0;
+  width: 240px;
+  max-width: 70vw;
+  background: rgba(11, 16, 16, 0.96);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 0.5rem;
+  z-index: 10;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.optionsList {
+  max-height: 220px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.4rem;
+}
+
+.optionButton {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 0.7rem;
+  color: var(--ivory-50);
+  cursor: pointer;
+  text-align: start;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.04);
+    color: var(--ivory);
+  }
+}
+
+.optionActive {
+  border-color: rgba(201,169,110,0.35);
+  background: var(--gold-glow-sm);
+  color: var(--gold-pale);
+}
+
+.searchInput {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 0.7rem;
+  color: var(--ivory-50);
+  outline: none;
+  transition: border-color 0.2s;
+  min-height: 32px;
+
+  &::placeholder {
+    color: var(--ivory-25);
+  }
+
+  &:hover {
+    border-color: rgba(255,255,255,0.15);
+  }
+
+  &:focus {
+    border-color: rgba(201,169,110,0.4);
+  }
+}
+
 .selectWrap {
   position: relative;
   display: inline-flex;
@@ -246,6 +367,13 @@
 .genderGroup {
   display: flex;
   gap: 0.3rem;
+}
+
+.genderWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
 }
 
 .genderBtn {
@@ -411,6 +539,10 @@
     font-size: 0.58rem;
   }
 
+  .hintText {
+    font-size: 0.55rem;
+  }
+
   .name {
     font-size: 0.75rem;
   }
@@ -418,6 +550,17 @@
   .locationSelect {
     font-size: 0.62rem;
     min-height: 28px;
+  }
+
+  .locationTrigger {
+    font-size: 0.62rem;
+    min-height: 28px;
+  }
+
+  .searchInput {
+    font-size: 0.62rem;
+    min-height: 28px;
+    width: 100%;
   }
 
   .genderBtn {

@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "Eid Together — Mgbidi Emume Uwa",
+    "description": "Gịnị kpatara ị na-eme emume naanị gị mgbe nde mmadụ n'ụwa na-ekekọrịta oge a dị nsọ? Abalị otu, ọnwa otu, emume otu — ọnụ.",
+    "ogTitle": "Eid Together — Mgbidi Emume Uwa",
+    "ogDescription": "Kekọrịta ekele Eid gị na ụwa. Abalị otu, ọnwa otu, emume otu — ọnụ."
+  },
+  "nav": {
+    "aria": "Nnyocha isi",
+    "home": "Ụlọ",
+    "wall": "Mgbidi",
+    "shareWish": "Kekọrịta Ekele",
+    "brand": "Eid Together",
+    "tagline": "Mgbidi Emume Uwa",
+    "homeAria": "Laghachi n'ụlọ Eid Together",
+    "openMenu": "Meghee menu",
+    "closeMenu": "Mechie menu",
+    "mobileAria": "Nnyocha ekwentị"
+  },
+  "language": {
+    "aria": "Gbanwee asụsụ"
+  },
+  "hero": {
+    "eyebrow": "Eid Al-Fitr · 1446 AH",
+    "title": "Mee Emume Eid",
+    "titleAccent": "Na Ụwa",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak n'asụsụ Arabic",
+    "subtitle": "Gịnị kpatara ị na-eme emume naanị gị mgbe nde mmadụ n'ụwa na-ekekọrịta oge a dị nsọ? Abalị otu, ọnwa otu, emume otu — ọnụ.",
+    "shareCta": "Kekọrịta Ekele Gị ✨",
+    "exploreCta": "Nyocha Mgbidi",
+    "shareAria": "Kekọrịta ekele Eid gị",
+    "exploreAria": "Nyocha mgbidi emume",
+    "scroll": "Tụgharịa"
+  },
+  "heroStats": {
+    "aria": "Nchịkọta emume",
+    "celebratingNow": "Na-eme emume ugbu a",
+    "countries": "Mba",
+    "wishesShared": "Ekele ndị a kesara"
+  },
+  "countries": {
+    "aria": "Mba na-eme emume Eid",
+    "label": "Na-eme emume n'ụwa · mba {count, number}"
+  },
+  "compose": {
+    "sectionTitle": "Kekọrịta Ngozi Eid Gị",
+    "sectionSubtitle": "Ekele gị na-ejikọta nde mmadụ n'ụwa abalị a",
+    "formLabel": "Kekọrịta ekele Eid",
+    "changeAvatar": "Gbanwee oyiyi",
+    "title": "Ekele Eid Gị",
+    "selectCountry": "Họrọ mba gị",
+    "searchCountry": "Chọọ mba",
+    "selectGender": "Họrọ okike gị",
+    "avatarHint": "Kpọọ foto ka ị gbanwee avatar",
+    "genderHint": "Kpọọ ka ị gbanwee okike",
+    "brother": "Nwanne nwoke",
+    "sister": "Nwanne nwanyị",
+    "you": "Gị",
+    "everywhere": "Ebe niile",
+    "placeholder": "Kekọrịta ngozi Eid gị na ụwa abalị a…",
+    "textareaLabel": "Dee ekele Eid gị",
+    "emojiRowLabel": "Tinye emoji na ozi",
+    "emojiButtonLabel": "Tinye emoji {emoji}",
+    "sendAria": "Zipu ekele Eid gị",
+    "send": "Zipu Ekele →",
+    "sending": "Na-ezipu…"
+  },
+  "feed": {
+    "heading": "Ekele si n'ụwa",
+    "new": "Ọhụrụ",
+    "filtersAria": "Nyochaa ekele",
+    "filters": {
+      "newest": "Nke ọhụrụ",
+      "popular": "A ma ama",
+      "trending": "Na-ewu ewu"
+    },
+    "reactionsAria": "Mmeghachi omume",
+    "reactionAria": "Mee mmeghachi omume na {emoji}, mmeghachi {count}",
+    "moreOptions": "Nhọrọ ndị ọzọ",
+    "everywhere": "Ebe niile"
+  },
+  "toast": {
+    "sendSuccess": "Ekele gị ejikọla ụwa abalị a!",
+    "sendError": "Enweghị ike izipu ekele gị. Biko gbalịa ọzọ."
+  },
+  "loading": {
+    "label": "Anyị na-eme emume ọnụ ✨"
+  },
+  "footer": {
+    "brand": "Eid Together",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · Anyị na-eme emume mmadụ · Eid ọ bụla, n'ụwa niile"
+  }
+}

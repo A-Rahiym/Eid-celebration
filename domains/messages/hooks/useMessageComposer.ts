@@ -4,24 +4,16 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { useCreateMessageMutation } from '@/domains/messages/mutation/mutations';
 import { pickAvatar } from '@/lib/avatar';
+import { getOrCreateUserId } from '@/lib/identity-client';
 import { useToast } from '@/hooks/useToast';
 
 const ALL_AVATARS = ['m1','m2','m3','m4','m5','f1','f2','f3','f4','f5'];
-
-function loadUserId(): string | undefined {
-  if (typeof window === 'undefined') return undefined;
-  const stored = localStorage.getItem('eid-identity');
-  if (stored) return stored;
-  const id = crypto.randomUUID();
-  localStorage.setItem('eid-identity', id);
-  return id;
-}
 
 function loadGender(): 'm' | 'f' | undefined {
   if (typeof window === 'undefined') return undefined;
   const stored = localStorage.getItem('eid-gender');
   if (stored === 'm' || stored === 'f') return stored;
-  return undefined;
+  return 'm';
 }
 
 function loadAvatarOverride(): string | undefined {
@@ -35,7 +27,7 @@ export function useMessageComposer(onSend: (text: string, location: string) => v
   const t = useTranslations('toast');
   const [text, setText] = useState('');
   const [location, setLocation] = useState('');
-  const [gender, setGenderState] = useState<'m' | 'f' | undefined>(undefined);
+  const [gender, setGenderState] = useState<'m' | 'f' | undefined>('m');
   const [userId, setUserId] = useState<string | undefined>(undefined);
   const [avatarOverride, setAvatarOverride] = useState<string | undefined>(undefined);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -44,9 +36,13 @@ export function useMessageComposer(onSend: (text: string, location: string) => v
 
   useEffect(() => {
     setTimeout(() => {
-      setUserId(loadUserId());
-      setGenderState(loadGender());
+      const loadedGender = loadGender();
+      setUserId(getOrCreateUserId());
+      setGenderState(loadedGender);
       setAvatarOverride(loadAvatarOverride());
+      if (typeof window !== 'undefined' && !localStorage.getItem('eid-gender') && loadedGender) {
+        localStorage.setItem('eid-gender', loadedGender);
+      }
     }, 0);
   }, []);
 
