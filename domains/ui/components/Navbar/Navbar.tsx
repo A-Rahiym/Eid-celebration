@@ -1,16 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import styles from './Navbar.module.scss';
 import NavLogo from './NavLogo';
 import LiveBadge from './LiveBadge';
 import MobileMenu from './MobileMenu';
 
-interface NavbarProps {
-  liveCount: number;
-}
-
-export default function Navbar({ liveCount }: NavbarProps) {
+export default function Navbar() {
   return (
     <motion.nav
       className={styles.nav}
@@ -24,18 +21,16 @@ export default function Navbar({ liveCount }: NavbarProps) {
         <NavLogo />
 
         <div className={styles.center} role="menubar">
-          <button className={styles.link} role="menuitem" tabIndex={0}>
+          <Link href="/" className={styles.link} role="menuitem">
+            Home
+          </Link>
+          <Link href="/board" className={styles.link} role="menuitem">
             Wall
-          </button>
-          <button className={styles.link} role="menuitem" tabIndex={0}>
-            Countries
-          </button>
-          <button className={styles.link} role="menuitem" tabIndex={0}>
-            About
-          </button>
+          </Link>
+          <Link href="/message" className={styles.link} role="menuitem">
+            Share Wish
+          </Link>
         </div>
-
-        <LiveBadge liveCount={liveCount} />
         <MobileMenu />
       </div>
     </motion.nav>

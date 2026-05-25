@@ -1,12 +1,13 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 
 const NAV_LINKS = [
-  { label: 'Wall', href: '#feed' },
-  { label: 'Countries', href: '#countries' },
-  { label: 'About', href: '#about' },
+  { label: 'Home', href: '/' },
+  { label: 'Wall', href: '/board' },
+  { label: 'Share Wish', href: '/message' },
 ];
 
 export default function MobileMenu() {
@@ -42,15 +43,15 @@ export default function MobileMenu() {
 
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
         <nav className={styles.drawerNav} aria-label="Mobile navigation">
-          {NAV_LINKS.map(link => (
-            <a
+          {NAV_LINKS.map((link) => (
+            <Link
               key={link.label}
               href={link.href}
               className={styles.drawerLink}
               onClick={() => setOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

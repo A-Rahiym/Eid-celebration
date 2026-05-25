@@ -1,0 +1,47 @@
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  color: var(--ivory-50);
+  text-align: center;
+}
+
+.fullHeight {
+  min-height: calc(100vh - var(--nav-h));
+}
+
+.spinner {
+  border-radius: 50%;
+  border: 2px solid rgba(245, 240, 232, 0.22);
+  border-top-color: var(--gold);
+  animation: spinner 0.9s linear infinite;
+}
+
+.sm {
+  width: 22px;
+  height: 22px;
+}
+
+.md {
+  width: 34px;
+  height: 34px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+}
+
+.label {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}

@@ -2,6 +2,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { QueryProvider } from '@/lib/query-provider';
+import AtmosphericBackground from '@/domains/atmospheric/components/AtmosphericBackground';
+import GrainOverlay from '@/domains/atmospheric/components/GrainOverlay';
+import { ToastProvider } from '@/domains/ui/components/Toast/ToastProvider';
+import Footer from '@/domains/ui/components/Footer/Footer';
+import LayoutContent from './LayoutContent';
 
 export const metadata: Metadata = {
   title: "Eid Together — Global Celebration Wall",
@@ -32,7 +37,12 @@ export default function RootLayout({
       </head>
       <body>
         <QueryProvider>
-          {children}
+          <ToastProvider>
+            <AtmosphericBackground />
+            <GrainOverlay />
+            <LayoutContent>{children}</LayoutContent>
+            <Footer />
+          </ToastProvider>
         </QueryProvider>
       </body>
     </html>

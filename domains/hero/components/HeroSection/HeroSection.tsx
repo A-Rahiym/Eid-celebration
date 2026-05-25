@@ -13,6 +13,7 @@ interface HeroSectionProps {
   wishCount: number;
   countriesCount: number;
   onShareClick: () => void;
+  onExploreClick?: () => void;
 }
 
 export default function HeroSection({
@@ -20,6 +21,7 @@ export default function HeroSection({
   wishCount,
   countriesCount,
   onShareClick,
+  onExploreClick,
 }: HeroSectionProps) {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
@@ -55,9 +57,7 @@ export default function HeroSection({
         </Button>
         <Button
           variant="ghost"
-          onClick={() => {
-            document.getElementById('feed')?.scrollIntoView({ behavior: 'smooth' });
-          }}
+          onClick={onExploreClick}
           aria-label="Explore the celebration wall"
         >
           Explore the Wall

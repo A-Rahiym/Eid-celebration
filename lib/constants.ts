@@ -134,9 +134,3 @@ export const MESSAGES: Wish[] = [
     time:"45m ago", reactions:{"🕌":13,"🌙":22,"✨":15}, color:"#0a1a3a", accent:"#4070b0"
   },
 ];
-
-export const AVATAR_COLORS = [
-  '#1c4a3a', '#2a1a4a', '#1a3a2a', '#3a2a0a',
-  '#1a2a4a', '#0a3a1a', '#2a1a2a', '#3a1a0a',
-  '#1a2a40', '#2a3a1a', '#1a1a3a', '#0a1a3a',
-];
