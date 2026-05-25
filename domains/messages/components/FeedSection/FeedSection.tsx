@@ -8,6 +8,7 @@ import FeedGrid from './FeedGrid';
 import MessageCard from './MessageCard';
 import { useMessagesQuery } from '@/domains/messages/query/queries';
 import { useFeedFilterStore } from '@/domains/ui/store/feed-filter-store';
+import Loading from '@/domains/ui/components/Loading/Loading';
 
 interface FeedSectionProps {
   showNewBadge: boolean;
@@ -36,14 +37,14 @@ export default function FeedSection({ showNewBadge }: FeedSectionProps) {
         <FeedGrid>
           <AnimatePresence mode="popLayout">
             {isLoading && messages.length === 0 ? (
-              <motion.p
+              <motion.div
                 key="loading"
                 className={styles.loading}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
-                Loading wishes from around the world…
-              </motion.p>
+                <Loading size="sm" />
+              </motion.div>
             ) : (
               messages.map((msg, i) => (
                 <motion.div

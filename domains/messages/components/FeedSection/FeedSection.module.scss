@@ -68,10 +68,9 @@
 
 .loading {
   grid-column: 1 / -1;
-  text-align: center;
-  color: var(--ivory-50);
-  font-size: 0.95rem;
-  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 3.5rem 0;
 }
 
 .grid {

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
+import CornerRosette from '@/domains/ui/components/icons/CornerRosette';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -15,7 +16,7 @@ export default function MobileMenu() {
 
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = '';
     } else {
       document.body.style.overflow = '';
     }
@@ -42,6 +43,12 @@ export default function MobileMenu() {
       )}
 
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
+        <div className={styles.menuFrame} aria-hidden="true">
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerTL}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerTR}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBL}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBR}`} />
+        </div>
         <nav className={styles.drawerNav} aria-label="Mobile navigation">
           {NAV_LINKS.map((link) => (
             <Link

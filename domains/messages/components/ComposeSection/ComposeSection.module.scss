@@ -307,15 +307,17 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.8rem;
 }
 
 .emojiRow {
   display: flex;
+  flex: 1;
+  min-width: 0;
   align-items: center;
   gap: 0.3rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .emojiBtn {
@@ -344,6 +346,7 @@
 .right {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 0.8rem;
 }
 

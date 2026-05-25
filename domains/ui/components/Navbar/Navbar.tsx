@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './Navbar.module.scss';
 import NavLogo from './NavLogo';
-import LiveBadge from './LiveBadge';
 import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
