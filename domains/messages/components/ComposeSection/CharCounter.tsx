@@ -1,3 +1,4 @@
+import { useFormatter } from 'next-intl';
 import styles from './ComposeSection.module.scss';
 
 interface CharCounterProps {
@@ -6,9 +7,11 @@ interface CharCounterProps {
 }
 
 export default function CharCounter({ current, max = 280 }: CharCounterProps) {
+  const formatter = useFormatter();
+
   return (
     <span className={styles.charCount} aria-live="polite">
-      {current} / {max}
+      {formatter.number(current)} / {formatter.number(max)}
     </span>
   );
 }

@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Eid Together — Küresel Kutlama Duvarı",
+    "description": "Dünyanın dört bir yanındaki milyonlar bu mübarek anı paylaşırken neden tek başına kutlayasın? Tek bir gece, tek bir ay, tek bir kutlama — birlikte.",
+    "ogTitle": "Eid Together — Küresel Kutlama Duvarı",
+    "ogDescription": "Bayram dileklerini dünyayla paylaş. Tek bir gece, tek bir ay, tek bir kutlama — birlikte."
+  },
+  "nav": {
+    "aria": "Ana gezinme",
+    "home": "Ana sayfa",
+    "wall": "Duvar",
+    "shareWish": "Dilek paylaş",
+    "brand": "Eid Together",
+    "tagline": "Küresel Kutlama Duvarı",
+    "homeAria": "Ana sayfaya dön",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "mobileAria": "Mobil gezinme"
+  },
+  "language": {
+    "aria": "Dil değiştir"
+  },
+  "hero": {
+    "eyebrow": "Ramazan Bayramı · 1446 AH",
+    "title": "Bayramı Kutla",
+    "titleAccent": "Dünyayla",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Arapça bayram tebriği",
+    "subtitle": "Dünyanın dört bir yanındaki milyonlar bu mübarek anı paylaşırken neden tek başına kutlayasın? Tek bir gece, tek bir ay, tek bir kutlama — birlikte.",
+    "shareCta": "Dileğini paylaş ✨",
+    "exploreCta": "Duvarı keşfet",
+    "shareAria": "Bayram dileğini paylaş",
+    "exploreAria": "Kutlama duvarını keşfet",
+    "scroll": "Kaydır"
+  },
+  "heroStats": {
+    "aria": "Kutlama istatistikleri",
+    "celebratingNow": "Şu an kutlayanlar",
+    "countries": "Ülke",
+    "wishesShared": "Paylaşılan dilek"
+  },
+  "countries": {
+    "aria": "Bayramı kutlayan ülkeler",
+    "label": "Dünya çapında kutlama · {count, number} ülke"
+  },
+  "compose": {
+    "sectionTitle": "Bayram bereketini paylaş",
+    "sectionSubtitle": "Dileğin bu gece dünyadaki milyonlara katılıyor",
+    "formLabel": "Bayram dileği paylaş",
+    "changeAvatar": "Avatarı değiştir",
+    "title": "Bayram dileğin",
+    "selectCountry": "Ülkeni seç",
+    "selectGender": "Cinsiyetini seç",
+    "brother": "Kardeş",
+    "sister": "Kız kardeş",
+    "you": "Sen",
+    "everywhere": "Her yerde",
+    "placeholder": "Bayram bereketini bu gece dünyayla paylaş…",
+    "textareaLabel": "Bayram dileğini yaz",
+    "emojiRowLabel": "Mesaja emoji ekle",
+    "emojiButtonLabel": "{emoji} emojisini ekle",
+    "sendAria": "Bayram dileğini gönder",
+    "send": "Dileği gönder →",
+    "sending": "Gönderiliyor…"
+  },
+  "feed": {
+    "heading": "Dünyadan dilekler",
+    "new": "Yeni",
+    "filtersAria": "Dilekleri filtrele",
+    "filters": {
+      "newest": "En yeni",
+      "popular": "Popüler",
+      "trending": "Trend"
+    },
+    "reactionsAria": "Tepkiler",
+    "reactionAria": "{emoji} ile tepki ver, {count} tepki",
+    "moreOptions": "Daha fazla seçenek",
+    "everywhere": "Her yerde"
+  },
+  "toast": {
+    "sendSuccess": "Dileğin bu gece dünyaya katıldı!",
+    "sendError": "Dilek gönderilemedi. Lütfen tekrar deneyin."
+  },
+  "loading": {
+    "label": "Birlikte kutluyoruz ✨"
+  },
+  "footer": {
+    "brand": "Eid Together",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · İnsanlığı kutluyoruz · Her bayram, her yerde"
+  }
+}

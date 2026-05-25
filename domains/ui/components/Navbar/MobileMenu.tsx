@@ -1,18 +1,20 @@
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
 import CornerRosette from '@/domains/ui/components/icons/CornerRosette';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'Wall', href: '/board' },
-  { label: 'Share Wish', href: '/message' },
+  { key: 'home', href: '/' },
+  { key: 'wall', href: '/board' },
+  { key: 'shareWish', href: '/message' },
 ];
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations('nav');
 
   useEffect(() => {
     if (open) {
@@ -30,7 +32,7 @@ export default function MobileMenu() {
       <button
         className={styles.hamburger}
         onClick={() => setOpen(!open)}
-        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-label={open ? t('closeMenu') : t('openMenu')}
         aria-expanded={open}
       >
         <span className={open ? styles.hamburgerLineOpen : styles.hamburgerLine} />
@@ -49,15 +51,15 @@ export default function MobileMenu() {
           <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBL}`} />
           <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBR}`} />
         </div>
-        <nav className={styles.drawerNav} aria-label="Mobile navigation">
+        <nav className={styles.drawerNav} aria-label={t('mobileAria')}>
           {NAV_LINKS.map((link) => (
             <Link
-              key={link.label}
+              key={link.key}
               href={link.href}
               className={styles.drawerLink}
               onClick={() => setOpen(false)}
             >
-              {link.label}
+              {t(link.key)}
             </Link>
           ))}
         </nav>

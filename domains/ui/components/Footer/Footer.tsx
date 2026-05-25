@@ -1,16 +1,19 @@
+import { getTranslations } from 'next-intl/server';
 import styles from './Footer.module.scss';
 import Container from '@/domains/ui/components/Container/Container';
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations('footer');
+
   return (
     <footer className={styles.footer} role="contentinfo">
       <Container>
-        <p className={styles.logo}>Eid Together</p>
+        <p className={styles.logo}>{t('brand')}</p>
         <p className={styles.arabic} lang="ar">
-          تقبّل الله منا ومنكم
+          {t('blessingArabic')}
         </p>
         <p className={styles.copy}>
-          &copy; 1446 AH · Celebrating humanity · Every Eid, worldwide
+          {t('copy')}
         </p>
       </Container>
     </footer>

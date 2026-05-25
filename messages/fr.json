@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Eid Together — Mur de célébration mondial",
+    "description": "Pourquoi célébrer seul alors que des millions dans le monde partagent ce moment béni ? Une nuit, une lune, une célébration — ensemble.",
+    "ogTitle": "Eid Together — Mur de célébration mondial",
+    "ogDescription": "Partagez vos vœux de l’Aïd avec le monde. Une nuit, une lune, une célébration — ensemble."
+  },
+  "nav": {
+    "aria": "Navigation principale",
+    "home": "Accueil",
+    "wall": "Mur",
+    "shareWish": "Partager un vœu",
+    "brand": "Eid Together",
+    "tagline": "Mur de célébration mondial",
+    "homeAria": "Retour à l’accueil",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "mobileAria": "Navigation mobile"
+  },
+  "language": {
+    "aria": "Changer de langue"
+  },
+  "hero": {
+    "eyebrow": "Aïd al-Fitr · 1446 AH",
+    "title": "Célébrez l’Aïd",
+    "titleAccent": "Avec le monde",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak en arabe",
+    "subtitle": "Pourquoi célébrer seul alors que des millions dans le monde partagent ce moment béni ? Une nuit, une lune, une célébration — ensemble.",
+    "shareCta": "Partagez votre vœu ✨",
+    "exploreCta": "Explorer le mur",
+    "shareAria": "Partager votre vœu de l’Aïd",
+    "exploreAria": "Explorer le mur de célébration",
+    "scroll": "Défiler"
+  },
+  "heroStats": {
+    "aria": "Statistiques de célébration",
+    "celebratingNow": "Célèbrent maintenant",
+    "countries": "Pays",
+    "wishesShared": "Vœux partagés"
+  },
+  "countries": {
+    "aria": "Pays célébrant l’Aïd",
+    "label": "Célébrations dans le monde · {count, number} pays"
+  },
+  "compose": {
+    "sectionTitle": "Partagez votre bénédiction de l’Aïd",
+    "sectionSubtitle": "Votre vœu rejoint des millions de personnes ce soir",
+    "formLabel": "Partager un vœu de l’Aïd",
+    "changeAvatar": "Changer d’avatar",
+    "title": "Votre vœu de l’Aïd",
+    "selectCountry": "Choisissez votre pays",
+    "selectGender": "Choisissez votre genre",
+    "brother": "Frère",
+    "sister": "Sœur",
+    "you": "Vous",
+    "everywhere": "Partout",
+    "placeholder": "Partagez votre bénédiction de l’Aïd avec le monde ce soir…",
+    "textareaLabel": "Écrivez votre vœu de l’Aïd",
+    "emojiRowLabel": "Ajouter un emoji au message",
+    "emojiButtonLabel": "Ajouter l’emoji {emoji}",
+    "sendAria": "Envoyer votre vœu de l’Aïd",
+    "send": "Envoyer le vœu →",
+    "sending": "Envoi…"
+  },
+  "feed": {
+    "heading": "Vœux du monde",
+    "new": "Nouveau",
+    "filtersAria": "Filtrer les vœux",
+    "filters": {
+      "newest": "Récents",
+      "popular": "Populaires",
+      "trending": "Tendances"
+    },
+    "reactionsAria": "Réactions",
+    "reactionAria": "Réagir avec {emoji}, {count} réactions",
+    "moreOptions": "Plus d’options",
+    "everywhere": "Partout"
+  },
+  "toast": {
+    "sendSuccess": "Votre vœu a rejoint le monde ce soir !",
+    "sendError": "Impossible d’envoyer votre vœu. Veuillez réessayer."
+  },
+  "loading": {
+    "label": "Célébrons ensemble ✨"
+  },
+  "footer": {
+    "brand": "Eid Together",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · Célébrer l’humanité · Chaque Aïd, partout"
+  }
+}

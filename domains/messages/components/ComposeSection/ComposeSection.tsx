@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import styles from './ComposeSection.module.scss';
 import SectionHeader from '@/domains/ui/components/SectionHeader/SectionHeader';
 import Container from '@/domains/ui/components/Container/Container';
@@ -14,6 +15,7 @@ interface ComposeSectionProps {
 }
 
 export default function ComposeSection({ onSend }: ComposeSectionProps) {
+  const t = useTranslations('compose');
   const {
     text, setText,
     location, setLocation,
@@ -31,8 +33,8 @@ export default function ComposeSection({ onSend }: ComposeSectionProps) {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <SectionHeader
-            title="Share Your Eid Blessing"
-            subtitle="Your wish joins millions around the world tonight"
+            title={t('sectionTitle')}
+            subtitle={t('sectionSubtitle')}
           />
           <div className={styles.mandala} aria-hidden="true">
             <MandalaRosette className={`${styles.mfCorner} ${styles.tl}`} />

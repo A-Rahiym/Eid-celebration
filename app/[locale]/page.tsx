@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import styles from './Home.module.scss';
 import HeroSection from '@/domains/hero/components/HeroSection/HeroSection';
 import CountriesTicker from '@/domains/ui/components/CountriesTicker/CountriesTicker';

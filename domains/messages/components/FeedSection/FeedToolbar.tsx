@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import type { FeedSortMode } from '@/lib/types';
 import styles from './FeedSection.module.scss';
 
@@ -7,32 +8,33 @@ interface FeedToolbarProps {
   showNewBadge: boolean;
 }
 
-const FILTERS: { key: FeedSortMode; label: string }[] = [
-  { key: 'newest', label: 'Newest' },
-  { key: 'popular', label: 'Popular' },
-  { key: 'trending', label: 'Trending' },
-];
-
 export default function FeedToolbar({
   currentFilter,
   onFilterChange,
   showNewBadge,
 }: FeedToolbarProps) {
+  const t = useTranslations('feed');
+  const filters: { key: FeedSortMode; label: string }[] = [
+    { key: 'newest', label: t('filters.newest') },
+    { key: 'popular', label: t('filters.popular') },
+    { key: 'trending', label: t('filters.trending') },
+  ];
+
   return (
     <div className={styles.toolbar}>
       <div className={styles.titleRow}>
         <h2 id="feed-heading" className={styles.heading}>
-          Wishes from the World
+          {t('heading')}
         </h2>
         {showNewBadge && (
           <span className={styles.newBadge} aria-live="polite">
-            New
+            {t('new')}
           </span>
         )}
       </div>
 
-      <div className={styles.filters} role="group" aria-label="Filter wishes">
-        {FILTERS.map(f => (
+      <div className={styles.filters} role="group" aria-label={t('filtersAria')}>
+        {filters.map(f => (
           <button
             key={f.key}
             type="button"

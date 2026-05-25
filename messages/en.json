@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Eid Together — Global Celebration Wall",
+    "description": "Why celebrate alone when millions across the globe share this blessed moment with you? One night, one moon, one celebration — together.",
+    "ogTitle": "Eid Together — Global Celebration Wall",
+    "ogDescription": "Share your Eid wishes with the world. One night, one moon, one celebration — together."
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "home": "Home",
+    "wall": "Wall",
+    "shareWish": "Share Wish",
+    "brand": "Eid Together",
+    "tagline": "Global Celebration Wall",
+    "homeAria": "Eid Together home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileAria": "Mobile navigation"
+  },
+  "language": {
+    "aria": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "Eid Al-Fitr · 1446 AH",
+    "title": "Celebrate Eid",
+    "titleAccent": "With the World",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak in Arabic",
+    "subtitle": "Why celebrate alone when millions across the globe share this blessed moment with you? One night, one moon, one celebration — together.",
+    "shareCta": "Share Your Wish ✨",
+    "exploreCta": "Explore the Wall",
+    "shareAria": "Share your Eid wish",
+    "exploreAria": "Explore the celebration wall",
+    "scroll": "Scroll"
+  },
+  "heroStats": {
+    "aria": "Celebration statistics",
+    "celebratingNow": "Celebrating now",
+    "countries": "Countries",
+    "wishesShared": "Wishes shared"
+  },
+  "countries": {
+    "aria": "Countries celebrating Eid",
+    "label": "Celebrating across the world · {count, number} countries"
+  },
+  "compose": {
+    "sectionTitle": "Share Your Eid Blessing",
+    "sectionSubtitle": "Your wish joins millions around the world tonight",
+    "formLabel": "Share Eid wish",
+    "changeAvatar": "Change avatar",
+    "title": "Your Eid Wish",
+    "selectCountry": "Select your country",
+    "selectGender": "Select your gender",
+    "brother": "Brother",
+    "sister": "Sister",
+    "you": "You",
+    "everywhere": "Everywhere",
+    "placeholder": "Share your Eid blessing with the world tonight…",
+    "textareaLabel": "Write your Eid wish",
+    "emojiRowLabel": "Add emoji to message",
+    "emojiButtonLabel": "Add {emoji} emoji",
+    "sendAria": "Send your Eid wish",
+    "send": "Send Wish →",
+    "sending": "Sending…"
+  },
+  "feed": {
+    "heading": "Wishes from the World",
+    "new": "New",
+    "filtersAria": "Filter wishes",
+    "filters": {
+      "newest": "Newest",
+      "popular": "Popular",
+      "trending": "Trending"
+    },
+    "reactionsAria": "Reactions",
+    "reactionAria": "React with {emoji}, {count} reactions",
+    "moreOptions": "More options",
+    "everywhere": "Everywhere"
+  },
+  "toast": {
+    "sendSuccess": "Your wish has joined the world tonight!",
+    "sendError": "Could not send your wish. Please try again."
+  },
+  "loading": {
+    "label": "Celebrating together ✨"
+  },
+  "footer": {
+    "brand": "Eid Together",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · Celebrating humanity · Every Eid, worldwide"
+  }
+}

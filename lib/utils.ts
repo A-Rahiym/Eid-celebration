@@ -4,11 +4,12 @@ export function getInitials(name: string): string {
   return name.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
 }
 
-export function formatCount(n: number): string {
-  return n.toLocaleString();
+export function formatCount(n: number, locale?: string): string {
+  return new Intl.NumberFormat(locale).format(n);
 }
 
 export function getFlagEmoji(countryCode: string): string {
+  if (countryCode === 'XX') return '🌍';
   if (countryCode.length === 2) {
     const codePoints = countryCode
       .toUpperCase()
@@ -20,27 +21,30 @@ export function getFlagEmoji(countryCode: string): string {
   return country?.flag || '🌍';
 }
 
-export function getCountryName(code: string): string {
-  if (code.length === 2 && !COUNTRIES.some((c) => c.code === code)) {
-    const nameMap: Record<string, string> = {
-      SA: 'Saudi Arabia', TR: 'Turkey', ID: 'Indonesia',
-      PK: 'Pakistan', BD: 'Bangladesh', EG: 'Egypt',
-      NG: 'Nigeria', MY: 'Malaysia', IR: 'Iran',
-      DZ: 'Algeria', MA: 'Morocco', GB: 'United Kingdom',
-      US: 'United States', FR: 'France', DE: 'Germany',
-      SN: 'Senegal', JO: 'Jordan', AE: 'UAE',
-      KM: 'Comoros', LB: 'Lebanon', SO: 'Somalia',
-      SD: 'Sudan', YE: 'Yemen', LY: 'Libya',
-      TN: 'Tunisia', AF: 'Afghanistan', UZ: 'Uzbekistan',
-      KZ: 'Kazakhstan', AZ: 'Azerbaijan', KG: 'Kyrgyzstan',
-      TJ: 'Tajikistan', IQ: 'Iraq', SY: 'Syria',
-      QA: 'Qatar', BH: 'Bahrain', OM: 'Oman',
-      KW: 'Kuwait', IN: 'India', CN: 'China',
-    };
-    return nameMap[code] || code;
+export function getCountryName(code: string, locale?: string): string {
+  if (!code) return '';
+  if (code.length === 2) {
+    try {
+      const displayNames = new Intl.DisplayNames(locale, { type: 'region' });
+      return displayNames.of(code.toUpperCase()) || code;
+    } catch {
+      return code;
+    }
   }
   const country = COUNTRIES.find((c) => c.code === code);
-  return country?.name || 'Everywhere';
+  return country?.code || code;
+}
+
+export function formatRelativeTime(iso: string, locale?: string): string {
+  const diff = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diff / 60000);
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' });
+
+  if (mins < 1) return rtf.format(0, 'minute');
+  if (mins < 60) return rtf.format(-mins, 'minute');
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return rtf.format(-hours, 'hour');
+  return rtf.format(-Math.floor(hours / 24), 'day');
 }
 
 export function cn(...classes: (string | false | undefined | null)[]): string {

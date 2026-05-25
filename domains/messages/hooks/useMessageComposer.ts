@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 import { useCreateMessageMutation } from '@/domains/messages/mutation/mutations';
 import { pickAvatar } from '@/lib/avatar';
 import { useToast } from '@/hooks/useToast';
@@ -31,6 +32,7 @@ function loadAvatarOverride(): string | undefined {
 }
 
 export function useMessageComposer(onSend: (text: string, location: string) => void) {
+  const t = useTranslations('toast');
   const [text, setText] = useState('');
   const [location, setLocation] = useState('');
   const [gender, setGenderState] = useState<'m' | 'f' | undefined>(undefined);
@@ -99,7 +101,7 @@ export function useMessageComposer(onSend: (text: string, location: string) => v
       setText('');
       onSend(trimmed, location);
     } catch {
-      show('⚠️', 'Could not send your wish. Please try again.');
+      show('⚠️', t('sendError'));
     }
   }
 

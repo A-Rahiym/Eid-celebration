@@ -1,11 +1,11 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import styles from './HeroSection.module.scss';
 import Moon from '@/domains/atmospheric/components/Moon';
 import Clouds from '@/domains/atmospheric/components/Clouds';
 import HeroOrnament from './HeroOrnament';
 import HeroStats from './HeroStats';
-import ScrollHint from './ScrollHint';
 import Button from '@/domains/ui/components/Button/Button';
 
 interface HeroSectionProps {
@@ -23,6 +23,8 @@ export default function HeroSection({
   onShareClick,
   onExploreClick,
 }: HeroSectionProps) {
+  const t = useTranslations('hero');
+
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.heroAtmos}>
@@ -33,34 +35,33 @@ export default function HeroSection({
 
       <div className={styles.eyebrow} aria-hidden="true">
         <span className={styles.eyebrowLine} />
-        Eid Al-Fitr · 1446 AH
+        {t('eyebrow')}
         <span className={`${styles.eyebrowLine} ${styles.right}`} />
       </div>
 
       <h1 id="hero-heading" className={styles.title}>
-        Celebrate Eid
-        <em className={styles.titleGold}>With the World</em>
+        {t('title')}
+        <em className={styles.titleGold}>{t('titleAccent')}</em>
       </h1>
 
-      <p className={styles.arabic} lang="ar" aria-label="Eid Mubarak in Arabic">
-        عيد مبارك
+      <p className={styles.arabic} lang="ar" aria-label={t('arabicAria')}>
+        {t('arabicGreeting')}
       </p>
 
       <p className={styles.subtitle}>
-        Why celebrate alone when millions across the globe share this blessed moment with you?
-        One night, one moon, one celebration — together.
+        {t('subtitle')}
       </p>
 
       <div className={styles.cta}>
-        <Button variant="primary" onClick={onShareClick} aria-label="Share your Eid wish">
-          Share Your Wish ✨
+        <Button variant="primary" onClick={onShareClick} aria-label={t('shareAria')}>
+          {t('shareCta')}
         </Button>
         <Button
           variant="ghost"
           onClick={onExploreClick}
-          aria-label="Explore the celebration wall"
+          aria-label={t('exploreAria')}
         >
-          Explore the Wall
+          {t('exploreCta')}
         </Button>
       </div>
 
@@ -69,8 +70,6 @@ export default function HeroSection({
         wishCount={wishCount}
         countriesCount={countriesCount}
       />
-
-      <ScrollHint />
     </section>
   );
 }

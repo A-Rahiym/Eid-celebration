@@ -1,7 +1,7 @@
 .toast {
   position: fixed;
   bottom: 2.5rem;
-  left: 50%;
+  inset-inline-start: 50%;
   transform: translateX(-50%) translateY(30px);
   background: var(--navy-raised);
   border: 1px solid rgba(201, 169, 110, 0.25);
@@ -31,8 +31,8 @@
 @media (max-width: 480px) {
   .toast {
     bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
+    inset-inline-start: 1rem;
+    inset-inline-end: 1rem;
     transform: translateY(30px);
     white-space: normal;
     justify-content: center;

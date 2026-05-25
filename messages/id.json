@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Eid Together — Dinding Perayaan Global",
+    "description": "Mengapa merayakan sendirian ketika jutaan orang di seluruh dunia berbagi momen penuh berkah ini? Satu malam, satu bulan, satu perayaan — bersama.",
+    "ogTitle": "Eid Together — Dinding Perayaan Global",
+    "ogDescription": "Bagikan ucapan Eidmu kepada dunia. Satu malam, satu bulan, satu perayaan — bersama."
+  },
+  "nav": {
+    "aria": "Navigasi utama",
+    "home": "Beranda",
+    "wall": "Dinding",
+    "shareWish": "Bagikan doa",
+    "brand": "Eid Together",
+    "tagline": "Dinding Perayaan Global",
+    "homeAria": "Kembali ke beranda",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "mobileAria": "Navigasi seluler"
+  },
+  "language": {
+    "aria": "Ganti bahasa"
+  },
+  "hero": {
+    "eyebrow": "Idulfitri · 1446 AH",
+    "title": "Rayakan Idulfitri",
+    "titleAccent": "Bersama Dunia",
+    "arabicGreeting": "عيد مبارك",
+    "arabicAria": "Eid Mubarak dalam bahasa Arab",
+    "subtitle": "Mengapa merayakan sendirian ketika jutaan orang di seluruh dunia berbagi momen penuh berkah ini? Satu malam, satu bulan, satu perayaan — bersama.",
+    "shareCta": "Bagikan doa ✨",
+    "exploreCta": "Jelajahi dinding",
+    "shareAria": "Bagikan doa Eidmu",
+    "exploreAria": "Jelajahi dinding perayaan",
+    "scroll": "Gulir"
+  },
+  "heroStats": {
+    "aria": "Statistik perayaan",
+    "celebratingNow": "Sedang merayakan",
+    "countries": "Negara",
+    "wishesShared": "Doa dibagikan"
+  },
+  "countries": {
+    "aria": "Negara yang merayakan Eid",
+    "label": "Merayakan di seluruh dunia · {count, number} negara"
+  },
+  "compose": {
+    "sectionTitle": "Bagikan berkah Eid",
+    "sectionSubtitle": "Doamu bergabung dengan jutaan orang di seluruh dunia malam ini",
+    "formLabel": "Bagikan doa Eid",
+    "changeAvatar": "Ganti avatar",
+    "title": "Doa Eidmu",
+    "selectCountry": "Pilih negaramu",
+    "selectGender": "Pilih gender",
+    "brother": "Saudara",
+    "sister": "Saudari",
+    "you": "Kamu",
+    "everywhere": "Di mana saja",
+    "placeholder": "Bagikan berkah Eidmu dengan dunia malam ini…",
+    "textareaLabel": "Tulis doa Eidmu",
+    "emojiRowLabel": "Tambahkan emoji ke pesan",
+    "emojiButtonLabel": "Tambahkan emoji {emoji}",
+    "sendAria": "Kirim doa Eidmu",
+    "send": "Kirim doa →",
+    "sending": "Mengirim…"
+  },
+  "feed": {
+    "heading": "Doa dari seluruh dunia",
+    "new": "Baru",
+    "filtersAria": "Saring doa",
+    "filters": {
+      "newest": "Terbaru",
+      "popular": "Populer",
+      "trending": "Trending"
+    },
+    "reactionsAria": "Reaksi",
+    "reactionAria": "Bereaksi dengan {emoji}, {count} reaksi",
+    "moreOptions": "Opsi lainnya",
+    "everywhere": "Di mana saja"
+  },
+  "toast": {
+    "sendSuccess": "Doamu telah bergabung dengan dunia malam ini!",
+    "sendError": "Tidak dapat mengirim doamu. Silakan coba lagi."
+  },
+  "loading": {
+    "label": "Merayakan bersama ✨"
+  },
+  "footer": {
+    "brand": "Eid Together",
+    "blessingArabic": "تقبّل الله منا ومنكم",
+    "copy": "© 1446 AH · Merayakan kemanusiaan · Setiap Eid, di seluruh dunia"
+  }
+}

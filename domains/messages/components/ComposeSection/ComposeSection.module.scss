@@ -41,8 +41,7 @@
 
 .mfEdge {
   position: absolute;
-  left: 48px;
-  right: 48px;
+  inset-inline: 48px;
   pointer-events: none;
   z-index: 2;
   display: flex;
@@ -103,8 +102,8 @@
   }
 }
 
-.mfSide.left  { left: -20px; }
-.mfSide.right { right: -20px; }
+.mfSide.left  { inset-inline-start: -20px; }
+.mfSide.right { inset-inline-end: -20px; }
 
 .mfSideLine {
   width: 1px;
@@ -140,8 +139,7 @@
 .cardGlow {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -238,7 +236,7 @@
 
 .chevron {
   position: absolute;
-  right: 0.5rem;
+  inset-inline-end: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--ivory-30);
@@ -404,8 +402,7 @@
 @media (max-width: 480px) {
   .card {
     padding: 0.85rem 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-inline: 0.5rem;
   }
 
   .avatar {

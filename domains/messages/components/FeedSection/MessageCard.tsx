@@ -1,7 +1,8 @@
 'use client';
 
+import { useLocale, useTranslations } from 'next-intl';
 import type { FeedMessage } from '@/lib/types';
-import { getFlagEmoji, getCountryName } from '@/lib/utils';
+import { getFlagEmoji, getCountryName, formatRelativeTime } from '@/lib/utils';
 import styles from './FeedSection.module.scss';
 import CardAvatar from './CardAvatar';
 import ReactionButton from './ReactionButton';
@@ -27,16 +28,6 @@ function colorFromSeed(seed: string, palette: string[]) {
   return palette[Math.abs(hash) % palette.length];
 }
 
-function formatTime(iso: string): string {
-  const diff = Date.now() - new Date(iso).getTime();
-  const mins = Math.floor(diff / 60000);
-  if (mins < 1) return 'just now';
-  if (mins < 60) return `${mins}m ago`;
-  const hours = Math.floor(mins / 60);
-  if (hours < 24) return `${hours}h ago`;
-  return `${Math.floor(hours / 24)}d ago`;
-}
-
 interface MessageCardProps {
   message: FeedMessage;
   isNew?: boolean;
@@ -44,12 +35,16 @@ interface MessageCardProps {
 }
 
 export default function MessageCard({ message: msg, isNew, style }: MessageCardProps) {
+  const t = useTranslations('feed');
+  const locale = useLocale();
   const flagEmoji = getFlagEmoji(msg.country_code);
-  const country = getCountryName(msg.country_code);
+  const country = msg.country_code === 'XX'
+    ? t('everywhere')
+    : getCountryName(msg.country_code, locale);
   const color = colorFromSeed(msg.user_id, AVATAR_COLORS);
   const accent = colorFromSeed(msg.user_id, ACCENT_COLORS);
   const avatarSeed = msg.avatar_seed;
-  const time = formatTime(msg.created_at);
+  const time = formatRelativeTime(msg.created_at, locale);
 
   return (
     <article
@@ -90,7 +85,7 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
       <div className={styles.cardBody}>{msg.message_text}</div>
 
       <div className={styles.cardFoot}>
-        <div className={styles.reactions} role="group" aria-label="Reactions">
+        <div className={styles.reactions} role="group" aria-label={t('reactionsAria')}>
           {msg.reactions.map((r) => (
             <ReactionButton
               key={r.reaction_type}
@@ -102,7 +97,7 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
         <span
           role="button"
           tabIndex={0}
-          aria-label="More options"
+          aria-label={t('moreOptions')}
           className={styles.cardMore}
         >
           ···

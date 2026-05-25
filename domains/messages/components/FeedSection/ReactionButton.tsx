@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useFormatter, useTranslations } from 'next-intl';
 import styles from './FeedSection.module.scss';
 
 interface ReactionButtonProps {
@@ -11,6 +12,8 @@ interface ReactionButtonProps {
 export default function ReactionButton({ emoji, initialCount }: ReactionButtonProps) {
   const [active, setActive] = useState(false);
   const [count, setCount] = useState(initialCount);
+  const t = useTranslations('feed');
+  const formatter = useFormatter();
 
   function toggle() {
     setActive(prev => {
@@ -23,12 +26,12 @@ export default function ReactionButton({ emoji, initialCount }: ReactionButtonPr
     <button
       type="button"
       onClick={toggle}
-      aria-label={`React with ${emoji}, ${count} reactions`}
+      aria-label={t('reactionAria', { emoji, count: formatter.number(count) })}
       aria-pressed={active}
       className={`${styles.rxn} ${active ? styles.rxnLit : ''}`}
     >
       {emoji}
-      <span className={styles.rxnCount}>{count}</span>
+      <span className={styles.rxnCount}>{formatter.number(count)}</span>
     </button>
   );
 }
