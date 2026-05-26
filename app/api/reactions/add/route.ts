@@ -31,6 +31,11 @@ export async function POST(request: NextRequest) {
       return error('Invalid request body', 'INVALID_JSON', 400);
     }
 
-    return error('Internal server error', 'INTERNAL_ERROR', 500);
+    return error(
+      'Internal server error',
+      'INTERNAL_ERROR',
+      500,
+      { detail: e instanceof Error ? e.message : String(e) },
+    );
   }
 }
