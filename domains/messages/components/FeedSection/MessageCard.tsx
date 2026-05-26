@@ -1,9 +1,11 @@
 'use client';
 
-import { memo, type CSSProperties } from 'react';
+import { memo, useMemo, useState, type CSSProperties } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { FeedMessage } from '@/lib/types';
 import { getFlagEmoji, getCountryName, formatRelativeTime } from '@/lib/utils';
+import { EMOJI_OPTIONS } from '@/lib/constants';
+import { getOrCreateUserId } from '@/lib/identity-client';
 import styles from './FeedSection.module.scss';
 import CardAvatar from './CardAvatar';
 import ReactionButton from './ReactionButton';
@@ -38,6 +40,7 @@ interface MessageCardProps {
 const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: MessageCardProps) {
   const t = useTranslations('feed');
   const locale = useLocale();
+  const [userId] = useState(getOrCreateUserId);
   const flagEmoji = getFlagEmoji(msg.country_code);
   const country = msg.country_code === 'XX'
     ? t('everywhere')
@@ -46,6 +49,14 @@ const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: Me
   const accent = colorFromSeed(msg.user_id, ACCENT_COLORS);
   const avatarSeed = msg.avatar_seed;
   const time = formatRelativeTime(msg.created_at, locale);
+
+  const reactionMap = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const r of msg.reactions) {
+      map.set(r.reaction_type, r.count);
+    }
+    return map;
+  }, [msg.reactions]);
 
   return (
     <article
@@ -87,11 +98,13 @@ const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: Me
 
       <div className={styles.cardFoot}>
         <div className={styles.reactions} role="group" aria-label={t('reactionsAria')}>
-          {msg.reactions.map((r) => (
+          {EMOJI_OPTIONS.map((emoji) => (
             <ReactionButton
-              key={r.reaction_type}
-              emoji={r.reaction_type}
-              initialCount={r.count}
+              key={emoji}
+              emoji={emoji}
+              initialCount={reactionMap.get(emoji) ?? 0}
+              messageId={msg.id}
+              userId={userId ?? ''}
             />
           ))}
         </div>
