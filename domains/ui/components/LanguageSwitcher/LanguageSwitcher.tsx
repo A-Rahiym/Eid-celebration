@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { LANGUAGE_OPTIONS } from '@/constants/languages';
+import CornerRosette from '@/domains/ui/components/icons/CornerRosette';
 import styles from './LanguageSwitcher.module.scss';
 
 export default function LanguageSwitcher() {
@@ -29,6 +30,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className={styles.switcher} ref={containerRef}>
+      <span className={styles.label}>{t('selectLanguage')}</span>
       <button
         type="button"
         className={styles.trigger}
@@ -36,13 +38,14 @@ export default function LanguageSwitcher() {
         aria-label={t('aria')}
         aria-expanded={open}
       >
-        <span className={styles.icon}>{current.icon}</span>
         <span>{current.label}</span>
       </button>
       <div className={`${styles.menu} ${open ? styles.menuOpen : ''}`} role="menu">
-        <div className={styles.menuHeader} aria-hidden="true">
-          <span className={styles.menuTitle}>{t('changeLanguage')}</span>
-          <span className={styles.menuOrnament} />
+        <div className={styles.menuFrame} aria-hidden="true">
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerTL}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerTR}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBL}`} />
+          <CornerRosette className={`${styles.menuCorner} ${styles.menuCornerBR}`} />
         </div>
         {LANGUAGE_OPTIONS.map((item) => (
           <button
@@ -55,7 +58,6 @@ export default function LanguageSwitcher() {
               setOpen(false);
             }}
           >
-            <span className={styles.icon}>{item.icon}</span>
             <span className={styles.optionLabel}>{item.name}</span>
             <span className={styles.optionCode}>{item.label}</span>
           </button>

@@ -1,6 +1,16 @@
 .switcher {
   position: relative;
   display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ivory-50);
+  white-space: nowrap;
 }
 
 .trigger {
@@ -23,10 +33,6 @@
 .trigger:hover {
   border-color: var(--glass-border-hover);
   color: var(--ivory);
-}
-
-.icon {
-  font-size: 0.8rem;
 }
 
 .menu {
@@ -55,27 +61,24 @@
   pointer-events: auto;
 }
 
-.menuHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  padding-bottom: 0.15rem;
+.menuFrame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.menuTitle {
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--ivory-50);
-}
-
-.menuOrnament {
-  height: 1px;
-  width: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgba(201,169,110,0.5), transparent);
+.menuCorner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
   opacity: 0.7;
+  pointer-events: none;
 }
+
+.menuCornerTL { top: -10px; left: -10px; }
+.menuCornerTR { top: -10px; right: -10px; transform: scaleX(-1); }
+.menuCornerBL { bottom: -10px; left: -10px; transform: scaleY(-1); }
+.menuCornerBR { bottom: -10px; right: -10px; transform: scale(-1,-1); }
 
 .option {
   display: inline-flex;

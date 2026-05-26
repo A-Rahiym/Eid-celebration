@@ -8,7 +8,7 @@ import AtmosphericBackground from '@/domains/atmospheric/components/AtmosphericB
 import GrainOverlay from '@/domains/atmospheric/components/GrainOverlay';
 import { ToastProvider } from '@/domains/ui/components/Toast/ToastProvider';
 import Footer from '@/domains/ui/components/Footer/Footer';
-import LayoutContent from './LayoutContent';
+import LayoutContent from './_components/LayoutContent';
 import { routing } from '@/i18n/routing';
 
 export function generateStaticParams() {
@@ -29,6 +29,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
+    icons: [{ rel: 'icon', url: '/icon.svg' }],
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),

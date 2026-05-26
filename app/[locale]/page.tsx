@@ -1,39 +1,13 @@
-'use client';
+import { createAdminClient } from '@/lib/supabase/server';
+import { StatsService } from '@/domains/stats/service/service';
+import HomeContent from './_components/HomeContent';
 
-import { useRouter } from '@/i18n/navigation';
-import styles from './Home.module.scss';
-import HeroSection from '@/domains/hero/components/HeroSection/HeroSection';
-import CountriesTicker from '@/domains/ui/components/CountriesTicker/CountriesTicker';
-import FloatingFeed from '@/domains/messages/components/FloatingFeed/FloatingFeed';
-import { useStatsQuery } from '@/domains/stats/query/queries';
+export const revalidate = 10;
 
-function HomeContent() {
-  const { data: stats } = useStatsQuery();
-  const router = useRouter();
+export default async function Home() {
+  const db = await createAdminClient();
+  const statsService = new StatsService(db);
+  const stats = await statsService.getGlobalStats();
 
-  const handleShare = () => {
-    router.push('/message');
-  };
-
-  const handleExplore = () => {
-    router.push('/board');
-  };
-
-  return (
-    <div className={styles.app}>
-      <HeroSection
-        liveCount={stats?.totalReactions ?? 0}
-        wishCount={stats?.totalMessages ?? 0}
-        countriesCount={stats?.countriesCelebrating ?? 0}
-        onShareClick={handleShare}
-        onExploreClick={handleExplore}
-      />
-      <CountriesTicker />
-      <FloatingFeed />
-    </div>
-  );
-}
-
-export default function Home() {
-  return <HomeContent />;
+  return <HomeContent stats={stats} />;
 }
