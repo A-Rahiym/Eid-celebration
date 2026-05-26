@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { useMessagesQuery } from '@/domains/messages/query/queries';
+import { useMessagesQuery } from '@/domains/messages/query/messages-query';
 import MessageCard from '@/domains/messages/components/FeedSection/MessageCard';
 import { useFloatingAnimations } from '@/hooks/useFloatingAnimations';
 import {

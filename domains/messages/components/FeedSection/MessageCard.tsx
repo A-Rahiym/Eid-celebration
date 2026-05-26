@@ -1,11 +1,10 @@
 'use client';
 
-import { memo, useMemo, useState, type CSSProperties } from 'react';
+import { memo, useMemo, type CSSProperties } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { FeedMessage } from '@/lib/types';
 import { getFlagEmoji, getCountryName, formatRelativeTime } from '@/lib/utils';
 import { EMOJI_OPTIONS } from '@/lib/constants';
-import { getOrCreateUserId } from '@/lib/identity-client';
 import styles from './FeedSection.module.scss';
 import CardAvatar from './CardAvatar';
 import ReactionButton from './ReactionButton';
@@ -40,7 +39,6 @@ interface MessageCardProps {
 const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: MessageCardProps) {
   const t = useTranslations('feed');
   const locale = useLocale();
-  const [userId] = useState(getOrCreateUserId);
   const flagEmoji = getFlagEmoji(msg.country_code);
   const country = msg.country_code === 'XX'
     ? t('everywhere')
@@ -106,7 +104,6 @@ const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: Me
               emoji={emoji}
               initialCount={reactionMap.get(emoji) ?? 0}
               messageId={msg.id}
-              userId={userId ?? ''}
               initialActive={userReactionSet.has(emoji)}
             />
           ))}

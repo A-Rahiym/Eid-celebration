@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { useCreateMessageMutation } from '@/domains/messages/mutation/mutations';
+import { useCreateMessageMutation } from '@/domains/messages/mutation/create-message';
 import { pickAvatar } from '@/lib/avatar';
 import { getOrCreateUserId } from '@/lib/identity-client';
 import { useToast } from '@/hooks/useToast';

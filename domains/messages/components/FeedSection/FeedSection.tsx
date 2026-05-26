@@ -4,7 +4,7 @@ import styles from './FeedSection.module.scss';
 import Container from '@/domains/ui/components/Container/Container';
 import FeedToolbar from './FeedToolbar';
 import FeedGrid from './FeedGrid';
-import { useMessagesQuery } from '@/domains/messages/query/queries';
+import { useMessagesQuery } from '@/domains/messages/query/messages-query';
 import { useFeedFilterStore } from '@/domains/ui/store/feed-filter-store';
 import FeedList from './FeedList/FeedList';
 import FeedState, { type FeedStateStatus } from './FeedState/FeedState';

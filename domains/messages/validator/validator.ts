@@ -72,10 +72,10 @@ export function validateDisplayName(name: string): ValidationError | null {
 }
 
 export function isSpam(text: string): boolean {
-  const upper = text.toUpperCase();
   const repeated = /(.)\1{10,}/.test(text);
-  const allCaps = upper === text && text.length > 50;
+  const hasCase = text !== text.toLowerCase();
+  const allCaps = hasCase && text === text.toUpperCase() && text.length > 50;
   const tooManyLinks = (text.match(/https?:\/\//g) || []).length > 2;
 
-  return repeated || (allCaps && text.length > 50) || tooManyLinks;
+  return repeated || allCaps || tooManyLinks;
 }
