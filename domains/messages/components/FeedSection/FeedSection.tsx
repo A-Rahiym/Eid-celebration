@@ -18,11 +18,15 @@ interface FeedSectionProps {
 export default function FeedSection({ showNewBadge }: FeedSectionProps) {
   const sortMode = useFeedFilterStore((s) => s.sortMode);
   const countryCode = useFeedFilterStore((s) => s.countryCode);
+  const page = useFeedFilterStore((s) => s.page);
   const setSortMode = useFeedFilterStore((s) => s.setSortMode);
+  const nextPage = useFeedFilterStore((s) => s.nextPage);
+  const prevPage = useFeedFilterStore((s) => s.prevPage);
 
   const { data, isLoading, isError } = useMessagesQuery({
     sortBy: sortMode,
     countryCode,
+    page,
   });
 
   const messages = data?.items ?? [];
@@ -49,11 +53,34 @@ export default function FeedSection({ showNewBadge }: FeedSectionProps) {
         <FeedGrid isBusy={status === 'loading'}>
           <FeedState status={status} />
           {status === 'populated' && (
-            <FeedList
-              messages={messages}
-              animations={animations}
-              reducedMotion={reducedMotion}
-            />
+            <>
+              <FeedList
+                messages={messages}
+                animations={animations}
+                reducedMotion={reducedMotion}
+              />
+              <div className={styles.pagination}>
+                <button
+                  type="button"
+                  className={styles.pageBtn}
+                  disabled={page <= 1}
+                  onClick={prevPage}
+                >
+                  ← Prev
+                </button>
+                <span className={styles.pageInfo}>
+                  Page {data?.page ?? 1}
+                </span>
+                <button
+                  type="button"
+                  className={styles.pageBtn}
+                  disabled={!data?.hasMore}
+                  onClick={nextPage}
+                >
+                  Next →
+                </button>
+              </div>
+            </>
           )}
         </FeedGrid>
       </Container>

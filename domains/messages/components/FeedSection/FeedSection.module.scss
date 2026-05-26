@@ -665,3 +665,46 @@
     color: var(--gold);
   }
 }
+
+.pagination {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0 1rem;
+}
+
+.pageBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 0.75rem;
+  color: var(--ivory-50);
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.04em;
+  min-height: 36px;
+
+  &:hover:not(:disabled) {
+    background: var(--gold-glow-sm);
+    border-color: rgba(201, 169, 110, 0.2);
+    color: var(--gold-pale);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+.pageInfo {
+  font-size: 0.7rem;
+  color: var(--ivory-25);
+  letter-spacing: 0.06em;
+}
