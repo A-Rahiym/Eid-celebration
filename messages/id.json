@@ -78,7 +78,12 @@
     "reactionsAria": "Reaksi",
     "reactionAria": "Bereaksi dengan {emoji}, {count} reaksi",
     "moreOptions": "Opsi lainnya",
-    "everywhere": "Di mana saja"
+    "everywhere": "Di mana saja",
+    "floatingRecentlyAdded": "Baru Ditambahkan",
+    "emptyTitle": "No wishes yet",
+    "emptyBody": "Be the first to share an Eid wish.",
+    "errorTitle": "Could not load wishes",
+    "errorBody": "Please try again in a moment."
   },
   "toast": {
     "sendSuccess": "Doamu telah bergabung dengan dunia malam ini!",

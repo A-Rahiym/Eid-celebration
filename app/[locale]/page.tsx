@@ -4,6 +4,7 @@ import { useRouter } from '@/i18n/navigation';
 import styles from './Home.module.scss';
 import HeroSection from '@/domains/hero/components/HeroSection/HeroSection';
 import CountriesTicker from '@/domains/ui/components/CountriesTicker/CountriesTicker';
+import FloatingFeed from '@/domains/messages/components/FloatingFeed/FloatingFeed';
 import { useStatsQuery } from '@/domains/stats/query/queries';
 
 function HomeContent() {
@@ -28,6 +29,7 @@ function HomeContent() {
         onExploreClick={handleExplore}
       />
       <CountriesTicker />
+      <FloatingFeed />
     </div>
   );
 }

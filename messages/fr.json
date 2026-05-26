@@ -78,7 +78,12 @@
     "reactionsAria": "Réactions",
     "reactionAria": "Réagir avec {emoji}, {count} réactions",
     "moreOptions": "Plus d’options",
-    "everywhere": "Partout"
+    "everywhere": "Partout",
+    "floatingRecentlyAdded": "Ajoutés récemment",
+    "emptyTitle": "Aucun vœu pour l’instant",
+    "emptyBody": "Soyez le premier à partager un vœu de l’Aïd.",
+    "errorTitle": "Impossible de charger les vœux",
+    "errorBody": "Veuillez réessayer dans un instant."
   },
   "toast": {
     "sendSuccess": "Votre vœu a rejoint le monde ce soir !",

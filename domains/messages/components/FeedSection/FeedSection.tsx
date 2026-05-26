@@ -1,14 +1,15 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import styles from './FeedSection.module.scss';
 import Container from '@/domains/ui/components/Container/Container';
 import FeedToolbar from './FeedToolbar';
 import FeedGrid from './FeedGrid';
-import MessageCard from './MessageCard';
 import { useMessagesQuery } from '@/domains/messages/query/queries';
 import { useFeedFilterStore } from '@/domains/ui/store/feed-filter-store';
-import Loading from '@/domains/ui/components/Loading/Loading';
+import FeedList from './FeedList/FeedList';
+import FeedState, { type FeedStateStatus } from './FeedState/FeedState';
+import { useFloatingAnimations } from '@/hooks/useFloatingAnimations';
+import { FEED_LIST_ANIMATION_CONFIG } from '@/constants/motion';
 
 interface FeedSectionProps {
   showNewBadge: boolean;
@@ -19,12 +20,23 @@ export default function FeedSection({ showNewBadge }: FeedSectionProps) {
   const countryCode = useFeedFilterStore((s) => s.countryCode);
   const setSortMode = useFeedFilterStore((s) => s.setSortMode);
 
-  const { data, isLoading } = useMessagesQuery({
+  const { data, isLoading, isError } = useMessagesQuery({
     sortBy: sortMode,
     countryCode,
   });
 
   const messages = data?.items ?? [];
+  const status: FeedStateStatus = isLoading && messages.length === 0
+    ? 'loading'
+    : isError
+      ? 'error'
+      : messages.length === 0
+        ? 'empty'
+        : 'populated';
+  const { animations, reducedMotion } = useFloatingAnimations(
+    messages,
+    FEED_LIST_ANIMATION_CONFIG,
+  );
 
   return (
     <section className={styles.section} id="feed" aria-labelledby="feed-heading">
@@ -34,35 +46,15 @@ export default function FeedSection({ showNewBadge }: FeedSectionProps) {
           onFilterChange={(f) => setSortMode(f)}
           showNewBadge={showNewBadge}
         />
-        <FeedGrid>
-          <AnimatePresence mode="popLayout">
-            {isLoading && messages.length === 0 ? (
-              <motion.div
-                key="loading"
-                className={styles.loading}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-              >
-                <Loading size="sm" />
-              </motion.div>
-            ) : (
-              messages.map((msg, i) => (
-                <motion.div
-                  key={msg.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: i * 0.04,
-                    ease: [0.25, 0.46, 0.45, 0.94],
-                  }}
-                >
-                  <MessageCard message={msg} />
-                </motion.div>
-              ))
-            )}
-          </AnimatePresence>
+        <FeedGrid isBusy={status === 'loading'}>
+          <FeedState status={status} />
+          {status === 'populated' && (
+            <FeedList
+              messages={messages}
+              animations={animations}
+              reducedMotion={reducedMotion}
+            />
+          )}
         </FeedGrid>
       </Container>
     </section>

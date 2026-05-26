@@ -78,7 +78,12 @@
     "reactionsAria": "Martani",
     "reactionAria": "Ba da martani da {emoji}, martani {count}",
     "moreOptions": "Karin zaɓuɓɓuka",
-    "everywhere": "Ko’ina"
+    "everywhere": "Ko’ina",
+    "floatingRecentlyAdded": "Sabuɗu da ƙara",
+    "emptyTitle": "No wishes yet",
+    "emptyBody": "Be the first to share an Eid wish.",
+    "errorTitle": "Could not load wishes",
+    "errorBody": "Please try again in a moment."
   },
   "toast": {
     "sendSuccess": "Gaisuwarka ta shiga duniya yau da dare!",

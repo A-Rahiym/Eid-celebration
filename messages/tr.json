@@ -78,7 +78,12 @@
     "reactionsAria": "Tepkiler",
     "reactionAria": "{emoji} ile tepki ver, {count} tepki",
     "moreOptions": "Daha fazla seçenek",
-    "everywhere": "Her yerde"
+    "everywhere": "Her yerde",
+    "floatingRecentlyAdded": "Son Eklenenler",
+    "emptyTitle": "No wishes yet",
+    "emptyBody": "Be the first to share an Eid wish.",
+    "errorTitle": "Could not load wishes",
+    "errorBody": "Please try again in a moment."
   },
   "toast": {
     "sendSuccess": "Dileğin bu gece dünyaya katıldı!",

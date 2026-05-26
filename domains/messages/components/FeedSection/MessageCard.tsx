@@ -1,5 +1,6 @@
 'use client';
 
+import { memo, type CSSProperties } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { FeedMessage } from '@/lib/types';
 import { getFlagEmoji, getCountryName, formatRelativeTime } from '@/lib/utils';
@@ -31,10 +32,10 @@ function colorFromSeed(seed: string, palette: string[]) {
 interface MessageCardProps {
   message: FeedMessage;
   isNew?: boolean;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
-export default function MessageCard({ message: msg, isNew, style }: MessageCardProps) {
+const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: MessageCardProps) {
   const t = useTranslations('feed');
   const locale = useLocale();
   const flagEmoji = getFlagEmoji(msg.country_code);
@@ -105,4 +106,8 @@ export default function MessageCard({ message: msg, isNew, style }: MessageCardP
       </div>
     </article>
   );
-}
+});
+
+MessageCard.displayName = 'MessageCard';
+
+export default MessageCard;

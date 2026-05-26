@@ -78,7 +78,12 @@
     "reactionsAria": "التفاعلات",
     "reactionAria": "تفاعل بـ {emoji}، {count} تفاعلات",
     "moreOptions": "خيارات أخرى",
-    "everywhere": "في كل مكان"
+    "everywhere": "في كل مكان",
+    "floatingRecentlyAdded": "أُضيفت مؤخراً",
+    "emptyTitle": "لا توجد أمنيات بعد",
+    "emptyBody": "كن أول من يشارك أمنية عيد.",
+    "errorTitle": "تعذر تحميل الأمنيات",
+    "errorBody": "يرجى المحاولة مرة أخرى بعد قليل."
   },
   "toast": {
     "sendSuccess": "انضمت أمنيتك إلى العالم الليلة!",
