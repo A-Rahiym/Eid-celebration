@@ -63,6 +63,7 @@ export class MessageService {
     pageSize: number;
     sortBy: 'created_at' | 'popular';
     countryCode?: string;
+    userId?: string;
   }) {
     const offset = (params.page - 1) * params.pageSize;
     const { items, total } = await this.messageRepo.listPaginated({
@@ -73,8 +74,11 @@ export class MessageService {
     });
     const messagesWithReactions: FeedMessage[] = await Promise.all(
       items.map(async (msg) => {
-        const reactions = await this.messageRepo.getMessageReactions(msg.id);
-        return { ...msg, reactions };
+        const [reactions, userReactions] = await Promise.all([
+          this.messageRepo.getMessageReactions(msg.id),
+          params.userId ? this.messageRepo.getUserReactions(msg.id, params.userId) : Promise.resolve([]),
+        ]);
+        return { ...msg, reactions, user_reactions: userReactions };
       }),
     );
     return {

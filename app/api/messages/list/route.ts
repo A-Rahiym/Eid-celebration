@@ -10,6 +10,7 @@ export async function GET(request: NextRequest) {
     const pageSize = Math.min(50, Math.max(1, parseInt(searchParams.get('pageSize') || '20', 10)));
     const sortBy = (searchParams.get('sortBy') || 'created_at') as 'created_at' | 'popular';
     const countryCode = searchParams.get('countryCode');
+    const userId = searchParams.get('userId');
 
     const db = await createAdminClient();
     const messageService = new MessageService(db);
@@ -19,6 +20,7 @@ export async function GET(request: NextRequest) {
       pageSize,
       sortBy: sortBy === 'popular' ? 'popular' : 'created_at',
       countryCode: countryCode || undefined,
+      userId: userId || undefined,
     });
     return success(result);
   } catch (e) {

@@ -50,6 +50,8 @@ const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: Me
   const avatarSeed = msg.avatar_seed;
   const time = formatRelativeTime(msg.created_at, locale);
 
+  const userReactionSet = useMemo(() => new Set(msg.user_reactions), [msg.user_reactions]);
+
   const reactionMap = useMemo(() => {
     const map = new Map<string, number>();
     for (const r of msg.reactions) {
@@ -105,6 +107,7 @@ const MessageCard = memo(function MessageCard({ message: msg, isNew, style }: Me
               initialCount={reactionMap.get(emoji) ?? 0}
               messageId={msg.id}
               userId={userId ?? ''}
+              initialActive={userReactionSet.has(emoji)}
             />
           ))}
         </div>

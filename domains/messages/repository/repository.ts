@@ -76,6 +76,17 @@ export class MessageRepository {
     }));
   }
 
+  async getUserReactions(messageId: string, userId: string) {
+    const { data, error } = await this.db
+      .from('reactions')
+      .select('reaction_type')
+      .eq('message_id', messageId)
+      .eq('user_id', userId);
+
+    if (error) throw error;
+    return data.map(r => r.reaction_type);
+  }
+
   async countByCountry() {
     const { data, error } = await this.db
       .from('messages')

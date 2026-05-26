@@ -35,7 +35,7 @@ export default function FeedToolbar({
       </div>
 
       <div className={styles.filterGroup}>
-        <div className={styles.filters} role="group" aria-label={t('filtersAria')}>
+        {/* <div className={styles.filters} role="group" aria-label={t('filtersAria')}>
           {filters.map(f => (
             <button
               key={f.key}
@@ -47,7 +47,7 @@ export default function FeedToolbar({
               {f.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         <FeedCountryFilter />
       </div>

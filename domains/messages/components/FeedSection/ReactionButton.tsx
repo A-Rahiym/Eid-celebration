@@ -9,10 +9,11 @@ interface ReactionButtonProps {
   initialCount: number;
   messageId: string;
   userId: string;
+  initialActive?: boolean;
 }
 
-export default function ReactionButton({ emoji, initialCount, messageId, userId }: ReactionButtonProps) {
-  const [active, setActive] = useState(false);
+export default function ReactionButton({ emoji, initialCount, messageId, userId, initialActive = false }: ReactionButtonProps) {
+  const [active, setActive] = useState(initialActive);
   const [count, setCount] = useState(initialCount);
   const [busy, setBusy] = useState(false);
   const t = useTranslations('feed');

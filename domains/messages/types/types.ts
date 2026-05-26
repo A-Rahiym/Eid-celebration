@@ -11,6 +11,7 @@ export interface Message {
 
 export interface FeedMessage extends Message {
   reactions: ReactionAggregate[];
+  user_reactions?: string[];
 }
 
 export interface ReactionAggregate {

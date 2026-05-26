@@ -3,10 +3,12 @@
 import { useQuery } from '@tanstack/react-query';
 import type { FeedSortMode } from '@/lib/types';
 import type { PaginatedResponse, FeedMessage } from '@/lib/types';
+import { getOrCreateUserId } from '@/lib/identity-client';
 
-function buildUrl(sortBy: string, countryCode?: string | null, page?: number) {
+function buildUrl(sortBy: string, countryCode?: string | null, page?: number, userId?: string) {
   const params = new URLSearchParams({ sortBy, page: String(page || 1) });
   if (countryCode) params.set('countryCode', countryCode);
+  if (userId) params.set('userId', userId);
   return `/api/messages/list?${params}`;
 }
 
@@ -26,8 +28,9 @@ export function useMessagesQuery(options: UseMessagesQueryOptions = {}) {
   return useQuery<PaginatedResponse<FeedMessage>>({
     queryKey: ['messages', sortBy, countryCode, page],
     queryFn: async () => {
+      const userId = getOrCreateUserId();
       const res = await fetch(
-        buildUrl(sortBy === 'popular' ? 'popular' : 'created_at', countryCode, page),
+        buildUrl(sortBy === 'popular' ? 'popular' : 'created_at', countryCode, page, userId),
       );
 
       if (!res.ok) {
