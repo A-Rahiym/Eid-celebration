@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Dileğin bu gece dünyaya katıldı!",
-    "sendError": "Dilek gönderilemedi. Lütfen tekrar deneyin."
+    "sendError": "Dilek gönderilemedi. Lütfen tekrar deneyin.",
+    "reactionError": "Tepki kaydedilemedi. Lütfen tekrar deneyin.",
+    "retry": "Tekrar Dene"
   },
   "loading": {
     "label": "Birlikte kutluyoruz ✨"

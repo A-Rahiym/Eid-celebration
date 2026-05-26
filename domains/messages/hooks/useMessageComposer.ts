@@ -96,8 +96,12 @@ export function useMessageComposer(onSend: (text: string, location: string) => v
       });
       setText('');
       onSend(trimmed, location);
+      show('✨', t('sendSuccess'));
     } catch {
-      show('⚠️', t('sendError'));
+      show('⚠️', t('sendError'), {
+        label: t('retry'),
+        onClick: handleSend,
+      });
     }
   }
 

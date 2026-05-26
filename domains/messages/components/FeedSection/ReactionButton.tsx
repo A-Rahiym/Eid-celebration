@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useFormatter, useTranslations } from 'next-intl';
 import { useAddReactionMutation } from '@/domains/reactions/mutation/add-reaction';
 import { useRemoveReactionMutation } from '@/domains/reactions/mutation/remove-reaction';
+import { useToast } from '@/hooks/useToast';
 import styles from './FeedSection.module.scss';
 
 interface ReactionButtonProps {
@@ -20,7 +21,10 @@ export default function ReactionButton({ emoji, initialCount, messageId, initial
   const removeReaction = useRemoveReactionMutation();
   const isPending = addReaction.isPending || removeReaction.isPending;
   const t = useTranslations('feed');
+  const tt = useTranslations('toast');
   const formatter = useFormatter();
+  const { show } = useToast();
+  const toggleRef = useRef<() => void>(() => {});
 
   async function toggle() {
     if (isPending) return;
@@ -40,8 +44,16 @@ export default function ReactionButton({ emoji, initialCount, messageId, initial
     } catch {
       setActive(prevActive);
       setCount(prevCount);
+      show('⚠️', tt('reactionError'), {
+        label: tt('retry'),
+        onClick: () => toggleRef.current(),
+      });
     }
   }
+
+  useEffect(() => {
+    toggleRef.current = toggle;
+  });
 
   return (
     <button

@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Ẹ̀kúnrẹ́rẹ́ rẹ ti darapọ̀ mọ́ ayé lálẹ́ yìí!",
-    "sendError": "A kò lè rán ẹ̀kúnrẹ́rẹ́ rẹ. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kàn síi."
+    "sendError": "A kò lè rán ẹ̀kúnrẹ́rẹ́ rẹ. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kàn síi.",
+    "reactionError": "A kò lè fipamọ́ ìhùwàpadà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kàn síi.",
+    "retry": "Tún Gbìyànjú"
   },
   "loading": {
     "label": "A ń ṣe ayẹyẹ pọ̀ ✨"

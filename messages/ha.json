@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Gaisuwarka ta shiga duniya yau da dare!",
-    "sendError": "An kasa aika gaisuwarka. A sake gwadawa."
+    "sendError": "An kasa aika gaisuwarka. A sake gwadawa.",
+    "reactionError": "An kasa adana martani. A sake gwadawa.",
+    "retry": "Sake Gwadawa"
   },
   "loading": {
     "label": "Muna biki tare ✨"

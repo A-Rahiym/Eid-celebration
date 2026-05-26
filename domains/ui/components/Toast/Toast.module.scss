@@ -22,10 +22,28 @@
 .show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
 }
 
 .icon {
   font-size: 1rem;
+}
+
+.action {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 50px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.action:hover {
+  opacity: 0.85;
 }
 
 @media (max-width: 480px) {

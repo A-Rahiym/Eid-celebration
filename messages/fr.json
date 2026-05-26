@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Votre vœu a rejoint le monde ce soir !",
-    "sendError": "Impossible d’envoyer votre vœu. Veuillez réessayer."
+    "sendError": "Impossible d’envoyer votre vœu. Veuillez réessayer.",
+    "reactionError": "Impossible de sauvegarder la réaction. Veuillez réessayer.",
+    "retry": "Réessayer"
   },
   "loading": {
     "label": "Célébrons ensemble ✨"

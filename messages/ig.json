@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Ekele gị ejikọla ụwa abalị a!",
-    "sendError": "Enweghị ike izipu ekele gị. Biko gbalịa ọzọ."
+    "sendError": "Enweghị ike izipu ekele gị. Biko gbalịa ọzọ.",
+    "reactionError": "Enweghị ike ichekwa mmeghachi omume. Biko gbalịa ọzọ.",
+    "retry": "Gbalịa Ọzọ"
   },
   "loading": {
     "label": "Anyị na-eme emume ọnụ ✨"

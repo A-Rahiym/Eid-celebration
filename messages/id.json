@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Doamu telah bergabung dengan dunia malam ini!",
-    "sendError": "Tidak dapat mengirim doamu. Silakan coba lagi."
+    "sendError": "Tidak dapat mengirim doamu. Silakan coba lagi.",
+    "reactionError": "Tidak dapat menyimpan reaksi. Silakan coba lagi.",
+    "retry": "Coba Lagi"
   },
   "loading": {
     "label": "Merayakan bersama ✨"

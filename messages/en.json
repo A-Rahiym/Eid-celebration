@@ -91,7 +91,9 @@
   },
   "toast": {
     "sendSuccess": "Your wish has joined the world tonight!",
-    "sendError": "Could not send your wish. Please try again."
+    "sendError": "Could not send your wish. Please try again.",
+    "reactionError": "Could not save reaction. Please try again.",
+    "retry": "Retry"
   },
   "loading": {
     "label": "Celebrating together ✨"
