@@ -225,12 +225,12 @@ export default function ComposeCard({
           aria-label={t('textareaLabel')}
           className={styles.textarea}
         />
+        <CharCounter current={text.length} />
       </div>
 
       <div className={styles.footer}>
         <EmojiPicker onEmojiSelect={insertEmoji} />
         <div className={styles.right}>
-          <CharCounter current={text.length} />
           <div className={styles.sendWrap}>
             <CornerRosette className={`${styles.rosette} ${styles.rosetteTL}`} />
             <CornerRosette className={`${styles.rosette} ${styles.rosetteTR}`} />

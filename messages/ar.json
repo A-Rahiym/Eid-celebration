@@ -85,7 +85,9 @@
     "emptyTitle": "لا توجد أمنيات بعد",
     "emptyBody": "كن أول من يشارك أمنية عيد.",
     "errorTitle": "تعذر تحميل الأمنيات",
-    "errorBody": "يرجى المحاولة مرة أخرى بعد قليل."
+    "errorBody": "يرجى المحاولة مرة أخرى بعد قليل.",
+    "filterByCountry": "Filter by country",
+    "allCountries": "All Countries"
   },
   "toast": {
     "sendSuccess": "انضمت أمنيتك إلى العالم الليلة!",

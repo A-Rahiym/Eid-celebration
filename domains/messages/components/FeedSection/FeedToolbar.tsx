@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import type { FeedSortMode } from '@/lib/types';
+import FeedCountryFilter from './FeedCountryFilter';
 import styles from './FeedSection.module.scss';
 
 interface FeedToolbarProps {
@@ -33,18 +34,22 @@ export default function FeedToolbar({
         )}
       </div>
 
-      <div className={styles.filters} role="group" aria-label={t('filtersAria')}>
-        {filters.map(f => (
-          <button
-            key={f.key}
-            type="button"
-            onClick={() => onFilterChange(f.key)}
-            aria-pressed={currentFilter === f.key}
-            className={`${styles.filterBtn} ${currentFilter === f.key ? styles.active : ''}`}
-          >
-            {f.label}
-          </button>
-        ))}
+      <div className={styles.filterGroup}>
+        <div className={styles.filters} role="group" aria-label={t('filtersAria')}>
+          {filters.map(f => (
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => onFilterChange(f.key)}
+              aria-pressed={currentFilter === f.key}
+              className={`${styles.filterBtn} ${currentFilter === f.key ? styles.active : ''}`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        <FeedCountryFilter />
       </div>
     </div>
   );

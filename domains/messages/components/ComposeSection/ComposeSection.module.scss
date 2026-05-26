@@ -405,7 +405,8 @@
 }
 
 .body {
-  padding: 0.2rem 0 0.8rem;
+  position: relative;
+  padding: 0.2rem 0.5rem 1.6rem;
   border-bottom: 1px solid var(--glass-border);
 }
 
@@ -477,8 +478,13 @@
 }
 
 .charCount {
+  position: absolute;
+  bottom: 0.3rem;
+  inset-inline-end: 0.5rem;
   font-size: 0.68rem;
   color: var(--ivory-25);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .sendWrap {
@@ -574,6 +580,10 @@
     height: 12px;
   }
 
+  .body {
+    padding: 0.2rem 0.5rem 1.6rem;
+  }
+
   .textarea {
     font-size: 0.85rem;
     min-height: 64px;
@@ -605,6 +615,8 @@
 
   .charCount {
     font-size: 0.6rem;
+    bottom: 0.25rem;
+    inset-inline-end: 0.4rem;
   }
 
   .footer {

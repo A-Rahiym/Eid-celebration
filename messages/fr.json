@@ -85,7 +85,9 @@
     "emptyTitle": "Aucun vœu pour l’instant",
     "emptyBody": "Soyez le premier à partager un vœu de l’Aïd.",
     "errorTitle": "Impossible de charger les vœux",
-    "errorBody": "Veuillez réessayer dans un instant."
+    "errorBody": "Veuillez réessayer dans un instant.",
+    "filterByCountry": "Filter by country",
+    "allCountries": "All Countries"
   },
   "toast": {
     "sendSuccess": "Votre vœu a rejoint le monde ce soir !",

@@ -85,7 +85,9 @@
     "emptyTitle": "No wishes yet",
     "emptyBody": "Be the first to share a Sallah wish.",
     "errorTitle": "Could not load wishes",
-    "errorBody": "Please try again in a moment."
+    "errorBody": "Please try again in a moment.",
+    "filterByCountry": "Filter by country",
+    "allCountries": "All Countries"
   },
   "toast": {
     "sendSuccess": "Gaisuwarka ta shiga duniya yau da dare!",
