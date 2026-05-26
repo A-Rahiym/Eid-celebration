@@ -1,6 +1,13 @@
 @keyframes cardIn {
-  from { opacity: 0; transform: translateY(16px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0)   scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .section {
@@ -113,7 +120,7 @@
 .card {
   break-inside: avoid;
   background: var(--glass);
-  border: 1px solid rgba(201,169,110,0.09);
+  border: 1px solid rgba(201, 169, 110, 0.09);
   border-radius: 16px;
   padding: 1.4rem 1.4rem 1.2rem;
   backdrop-filter: blur(12px) saturate(1.2);
@@ -132,12 +139,11 @@
     inset-inline: 14%;
     height: 1px;
     background: linear-gradient(90deg,
-      transparent,
-      rgba(201,169,110,0.30) 30%,
-      rgba(201,169,110,0.50) 50%,
-      rgba(201,169,110,0.30) 70%,
-      transparent
-    );
+        transparent,
+        rgba(201, 169, 110, 0.30) 30%,
+        rgba(201, 169, 110, 0.50) 50%,
+        rgba(201, 169, 110, 0.30) 70%,
+        transparent);
     border-radius: 1px;
     pointer-events: none;
   }
@@ -155,15 +161,15 @@
   }
 
   &:hover {
-    border-color: rgba(201,169,110,0.20);
+    border-color: rgba(201, 169, 110, 0.20);
     transform: translateY(-3px);
     box-shadow:
-      0 16px 48px rgba(0,0,0,0.5),
-      0 0 35px rgba(201,169,110,0.06);
+      0 16px 48px rgba(0, 0, 0, 0.5),
+      0 0 35px rgba(201, 169, 110, 0.06);
 
     &::after {
-      border-color: rgba(201,169,110,0.10);
-      box-shadow: 0 0 20px rgba(201,169,110,0.06);
+      border-color: rgba(201, 169, 110, 0.10);
+      box-shadow: 0 0 20px rgba(201, 169, 110, 0.06);
     }
   }
 
@@ -204,8 +210,8 @@
   overflow: hidden;
 
   @media (max-width: 480px) {
-    width: 30px;
-    height: 30px;
+    width: 64px;
+    height: 64px;
     font-size: 0.55rem;
   }
 }
@@ -298,12 +304,11 @@
   inset-inline: 14%;
   height: 1px;
   background: linear-gradient(90deg,
-    transparent,
-    rgba(201,169,110,0.15) 30%,
-    rgba(201,169,110,0.28) 50%,
-    rgba(201,169,110,0.15) 70%,
-    transparent
-  );
+      transparent,
+      rgba(201, 169, 110, 0.15) 30%,
+      rgba(201, 169, 110, 0.28) 50%,
+      rgba(201, 169, 110, 0.15) 70%,
+      transparent);
   pointer-events: none;
 }
 
@@ -314,12 +319,11 @@
   inset-inline-start: 0;
   width: 1px;
   background: linear-gradient(180deg,
-    transparent,
-    rgba(201,169,110,0.22) 25%,
-    var(--card-accent, rgba(201,169,110,0.35)) 50%,
-    rgba(201,169,110,0.22) 75%,
-    transparent
-  );
+      transparent,
+      rgba(201, 169, 110, 0.22) 25%,
+      var(--card-accent, rgba(201, 169, 110, 0.35)) 50%,
+      rgba(201, 169, 110, 0.22) 75%,
+      transparent);
   pointer-events: none;
 }
 
@@ -330,12 +334,11 @@
   inset-inline-end: 0;
   width: 1px;
   background: linear-gradient(180deg,
-    transparent,
-    rgba(201,169,110,0.12) 25%,
-    rgba(201,169,110,0.20) 50%,
-    rgba(201,169,110,0.12) 75%,
-    transparent
-  );
+      transparent,
+      rgba(201, 169, 110, 0.12) 25%,
+      rgba(201, 169, 110, 0.20) 50%,
+      rgba(201, 169, 110, 0.12) 75%,
+      transparent);
   pointer-events: none;
 }
 
@@ -346,7 +349,7 @@
   transform: translateY(-50%) rotate(45deg);
   width: 5px;
   height: 5px;
-  background: var(--card-accent, rgba(201,169,110,0.6));
+  background: var(--card-accent, rgba(201, 169, 110, 0.6));
   opacity: 0.55;
   transition: opacity 0.3s;
   pointer-events: none;
@@ -358,10 +361,32 @@
   z-index: 3;
 }
 
-.cardCornerTL { composes: cardCorner; top: -1px;  inset-inline-start: -1px; }
-.cardCornerTR { composes: cardCorner; top: -1px;  inset-inline-end: -1px; transform: scaleX(-1); }
-.cardCornerBL { composes: cardCorner; bottom: -1px; inset-inline-start: -1px; transform: scaleY(-1); }
-.cardCornerBR { composes: cardCorner; bottom: -1px; inset-inline-end: -1px; transform: scale(-1,-1); }
+.cardCornerTL {
+  composes: cardCorner;
+  top: -1px;
+  inset-inline-start: -1px;
+}
+
+.cardCornerTR {
+  composes: cardCorner;
+  top: -1px;
+  inset-inline-end: -1px;
+  transform: scaleX(-1);
+}
+
+.cardCornerBL {
+  composes: cardCorner;
+  bottom: -1px;
+  inset-inline-start: -1px;
+  transform: scaleY(-1);
+}
+
+.cardCornerBR {
+  composes: cardCorner;
+  bottom: -1px;
+  inset-inline-end: -1px;
+  transform: scale(-1, -1);
+}
 
 .cardHead {
   display: flex;
@@ -382,6 +407,12 @@
   flex-shrink: 0;
   border: 1px solid rgba(255, 255, 255, 0.06);
   letter-spacing: 0.02em;
+
+  @media (max-width: 480px) {
+    width: 64px;
+    height: 64px;
+    font-size: 0.55rem;
+  }
 }
 
 .cardInfo {

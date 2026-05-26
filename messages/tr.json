@@ -18,7 +18,8 @@
     "mobileAria": "Mobil gezinme"
   },
   "language": {
-    "aria": "Dil değiştir"
+    "aria": "Dil değiştir",
+    "changeLanguage": "Dil değiştir"
   },
   "hero": {
     "eyebrow": "Ramazan Bayramı · 1446 AH",

@@ -1,35 +1,36 @@
 {
   "metadata": {
-    "title": "Eid Tare — Ganuwar Bikin Duniya",
+    "title": "Sallah Tare — Ganuwar Bikin Duniya",
     "description": "Me ya sa za a yi biki kai kaɗai alhali miliyoyi a fadin duniya suna raba wannan lokaci mai albarka? Dare ɗaya, wata ɗaya, biki ɗaya — tare.",
-    "ogTitle": "Eid Tare — Ganuwar Bikin Duniya",
-    "ogDescription": "Raba gaisuwar Eid ɗinka da duniya. Dare ɗaya, wata ɗaya, biki ɗaya — tare."
+    "ogTitle": "Sallah Tare — Ganuwar Bikin Duniya",
+    "ogDescription": "Raba gaisuwar Sallah ɗinka da duniya. Dare ɗaya, wata ɗaya, biki ɗaya — tare."
   },
   "nav": {
     "aria": "Babban kewayawa",
     "home": "Gida",
     "wall": "Ganuwa",
     "shareWish": "Raba Gaisuwa",
-    "brand": "Eid Tare",
+    "brand": "Sallah Tare",
     "tagline": "Ganuwar Bikin Duniya",
-    "homeAria": "Komawa gida na Eid Tare",
+    "homeAria": "Komawa gida na Sallah Tare",
     "openMenu": "Buɗe menu",
     "closeMenu": "Rufe menu",
     "mobileAria": "Kewayawa ta wayar hannu"
   },
   "language": {
-    "aria": "Canja harshe"
+    "aria": "Canja harshe",
+    "changeLanguage": "Canja harshe"
   },
   "hero": {
-    "eyebrow": "Eid Al-Fitr · 1446 AH",
-    "title": "Ku Yi Bikin Eid",
+    "eyebrow": "Sallah Al-Fitr · 1446 AH",
+    "title": "Ku Yi Bikin Sallah",
     "titleAccent": "Tare da Duniya",
     "arabicGreeting": "عيد مبارك",
-    "arabicAria": "Eid Mubarak a Larabci",
+    "arabicAria": "Sallah Mubarak a Larabci",
     "subtitle": "Me ya sa za a yi biki kai kaɗai alhali miliyoyi a fadin duniya suna raba wannan lokaci mai albarka? Dare ɗaya, wata ɗaya, biki ɗaya — tare.",
     "shareCta": "Raba Gaisuwarka ✨",
     "exploreCta": "Bincika Ganuwar",
-    "shareAria": "Raba gaisuwar Eid ɗinka",
+    "shareAria": "Raba gaisuwar Sallah ɗinka",
     "exploreAria": "Bincika ganuwar bikin",
     "scroll": "Gungura"
   },
@@ -40,15 +41,15 @@
     "wishesShared": "Gaisuwa da aka raba"
   },
   "countries": {
-    "aria": "Kasashen da ke bikin Eid",
+    "aria": "Kasashen da ke bikin Sallah",
     "label": "Ana bikin a fadin duniya · kasashe {count, number}"
   },
   "compose": {
-    "sectionTitle": "Raba Albarkar Eid",
+    "sectionTitle": "Raba Albarkar Sallah",
     "sectionSubtitle": "Gaisuwarka ta hada kai da miliyoyi a duniya yau da dare",
-    "formLabel": "Raba gaisuwar Eid",
+    "formLabel": "Raba gaisuwar Sallah",
     "changeAvatar": "Canja hoto",
-    "title": "Gaisuwar Eid ɗinka",
+    "title": "Gaisuwar Sallah ɗinka",
     "selectCountry": "Zaɓi ƙasarka",
     "searchCountry": "Nemo ƙasa",
     "selectGender": "Zaɓi jinsinka",
@@ -58,11 +59,11 @@
     "sister": "Ɗan’uwa mace",
     "you": "Kai",
     "everywhere": "Ko’ina",
-    "placeholder": "Raba albarkar Eid ɗinka da duniya yau da dare…",
-    "textareaLabel": "Rubuta gaisuwar Eid ɗinka",
+    "placeholder": "Raba albarkar Sallah ɗinka da duniya yau da dare…",
+    "textareaLabel": "Rubuta gaisuwar Sallah ɗinka",
     "emojiRowLabel": "Ƙara emoji a saƙo",
     "emojiButtonLabel": "Ƙara emoji {emoji}",
-    "sendAria": "Aika gaisuwar Eid ɗinka",
+    "sendAria": "Aika gaisuwar Sallah ɗinka",
     "send": "Aika Gaisuwa →",
     "sending": "Ana aikawa…"
   },
@@ -81,7 +82,7 @@
     "everywhere": "Ko’ina",
     "floatingRecentlyAdded": "Sabuɗu da ƙara",
     "emptyTitle": "No wishes yet",
-    "emptyBody": "Be the first to share an Eid wish.",
+    "emptyBody": "Be the first to share a Sallah wish.",
     "errorTitle": "Could not load wishes",
     "errorBody": "Please try again in a moment."
   },
@@ -93,8 +94,8 @@
     "label": "Muna biki tare ✨"
   },
   "footer": {
-    "brand": "Eid Tare",
+    "brand": "Sallah Tare",
     "blessingArabic": "تقبّل الله منا ومنكم",
-    "copy": "© 1446 AH · Muna bikin ɗan Adam · Kowane Eid, a ko’ina"
+    "copy": "© 1446 AH · Muna bikin ɗan Adam · Kowane Sallah, a ko’ina"
   }
 }

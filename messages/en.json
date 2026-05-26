@@ -18,7 +18,8 @@
     "mobileAria": "Mobile navigation"
   },
   "language": {
-    "aria": "Switch language"
+    "aria": "Switch language",
+    "changeLanguage": "Change language"
   },
   "hero": {
     "eyebrow": "Eid Al-Fitr · 1446 AH",

@@ -3,18 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
+import { LANGUAGE_OPTIONS } from '@/constants/languages';
 import styles from './LanguageSwitcher.module.scss';
-
-const LOCALES = [
-  { locale: 'en', label: 'EN', icon: '🌍' },
-  { locale: 'ar', label: 'AR', icon: '🌙' },
-  { locale: 'fr', label: 'FR', icon: '✨' },
-  { locale: 'tr', label: 'TR', icon: '🕌' },
-  { locale: 'id', label: 'ID', icon: '🌿' },
-  { locale: 'ha', label: 'HA', icon: '🌍' },
-  { locale: 'ig', label: 'IG', icon: '🌍' },
-  { locale: 'yo', label: 'YO', icon: '🌍' },
-];
 
 export default function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
@@ -35,7 +25,7 @@ export default function LanguageSwitcher() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const current = LOCALES.find((item) => item.locale === currentLocale) ?? LOCALES[0];
+  const current = LANGUAGE_OPTIONS.find((item) => item.locale === currentLocale) ?? LANGUAGE_OPTIONS[0];
 
   return (
     <div className={styles.switcher} ref={containerRef}>
@@ -50,7 +40,11 @@ export default function LanguageSwitcher() {
         <span>{current.label}</span>
       </button>
       <div className={`${styles.menu} ${open ? styles.menuOpen : ''}`} role="menu">
-        {LOCALES.map((item) => (
+        <div className={styles.menuHeader} aria-hidden="true">
+          <span className={styles.menuTitle}>{t('changeLanguage')}</span>
+          <span className={styles.menuOrnament} />
+        </div>
+        {LANGUAGE_OPTIONS.map((item) => (
           <button
             key={item.locale}
             type="button"
@@ -62,7 +56,8 @@ export default function LanguageSwitcher() {
             }}
           >
             <span className={styles.icon}>{item.icon}</span>
-            <span>{item.label}</span>
+            <span className={styles.optionLabel}>{item.name}</span>
+            <span className={styles.optionCode}>{item.label}</span>
           </button>
         ))}
       </div>
