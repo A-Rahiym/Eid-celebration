@@ -15,7 +15,8 @@
     "homeAria": "Komawa gida na Sallah Tare",
     "openMenu": "Buɗe menu",
     "closeMenu": "Rufe menu",
-    "mobileAria": "Kewayawa ta wayar hannu"
+    "mobileAria": "Kewayawa ta wayar hannu",
+    "about": "Game da"
   },
   "language": {
     "aria": "Canja harshe",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Muna biki tare ✨"
+  },
+  "about": {
+    "title": "Game da Eid Together",
+    "description": "Katun biki na duniya inda kowa zai iya raba fatan Sallah da kuma martani ga fata daga ko'ina cikin duniya. Babu rajista, babu asusu — kawai albarka.",
+    "motivation": "Dalili",
+    "motivationText": "Sallah biki ne da miliyoyi a duniya ke yi, amma yawancin mu muna raba shi ne kawai tare da mutanen da muka sani. Wannan aikin ƙaramin ƙoƙari ne don jin girman wannan biki — sarari inda zaka iya barin albarka da kuma duba fata daga baƙi a wasu ƙasashe, cikin harsunansu.",
+    "tech": "An Gina Da",
+    "techFrontend": "Gaba da hanyoyin API",
+    "techDb": "Ma'ajiyar bayanai",
+    "techData": "Dauke bayanai",
+    "techI18n": "Fassara (8 harsuna)",
+    "techMotion": "Motsi",
+    "openSource": "Bude Tushen",
+    "openSourceDesc": "Wannan aikin bude tushen ne akan",
+    "reachOut": "Tuntube Mu",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Rufe"
   },
   "footer": {
     "brand": "Sallah Tare",

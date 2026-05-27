@@ -15,7 +15,8 @@
     "homeAria": "Padà sí ilé Eid Pọ̀",
     "openMenu": "Ṣí akojọ",
     "closeMenu": "Tì akojọ",
-    "mobileAria": "Ìrìnàjò alágbèéká"
+    "mobileAria": "Ìrìnàjò alágbèéká",
+    "about": "Nípa"
   },
   "language": {
     "aria": "Yí èdè padà",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "A ń ṣe ayẹyẹ pọ̀ ✨"
+  },
+  "about": {
+    "title": "Nípa Eid Together",
+    "description": "Odi ayẹyẹ agbaye kan nibiti ẹnikẹ́ni le pin ifẹ Eid ati fesi si awọn ifẹ lati ayika agbaye. Ko si iforukọsilẹ, ko si awọn akọọlẹ — awọn ibukun nikan.",
+    "motivation": "Iṣokẹra",
+    "motivationText": "Eid jẹ ayẹyẹ ti awọn miliọnu kaakiri agbaye, ṣugbọn ọpọlọpọ wa n pin rẹ pẹlu awọn ti a mọ nikan. Iṣẹ yii jẹ igbiyanju kekere lati rilara iwọn ayẹyẹ yẹn — aaye nibiti o ti fi ibukun silẹ ki o wo awọn ifẹ lati ọdọ awọn alejo ni awọn orilẹ-ede miiran, ni awọn ede wọn.",
+    "tech": "Ti kọ pẹlu",
+    "techFrontend": "Iwaju ati awọn ipa ọna API",
+    "techDb": "Ibi ipamọ data",
+    "techData": "Gbigba data",
+    "techI18n": "Internationalization (8 ede)",
+    "techMotion": "Awọn iṣipopada",
+    "openSource": "Orisun Ṣii",
+    "openSourceDesc": "Ise agbese yii jẹ orisun ṣii lori",
+    "reachOut": "Kan si",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Tii"
   },
   "footer": {
     "brand": "Eid Pọ̀",

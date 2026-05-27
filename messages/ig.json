@@ -15,7 +15,8 @@
     "homeAria": "Laghachi n'ụlọ Eid Together",
     "openMenu": "Meghee menu",
     "closeMenu": "Mechie menu",
-    "mobileAria": "Nnyocha ekwentị"
+    "mobileAria": "Nnyocha ekwentị",
+    "about": "Gbasara"
   },
   "language": {
     "aria": "Gbanwee asụsụ",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Anyị na-eme emume ọnụ ✨"
+  },
+  "about": {
+    "title": "Gbasara Eid Together",
+    "description": "Mgbidi emume zuru ụwa ọnụ ebe onye ọ bụla nwere ike ịkekọrịta ọchịchọ Eid wee meghachi omume na ọchịchọ sitere na ụwa niile. Enweghị ndebanye aha, enweghị akaụntụ — naanị ngọzi.",
+    "motivation": "Mkpalie",
+    "motivationText": "Eid bụ emume nke ọtụtụ nde mmadụ na-eme n'ụwa niile, ma ọtụtụ n'ime anyị na-ekerịta ya naanị na ndị anyị maara. Ọrụ a bụ obere mbọ iji nụ oke emume a — oghere ebe ị tọgbọrọ ngọzi ma nyochaa ọchịchọ sitere n'aka ndị bịara abịa na mba ndị ọzọ, n'asụsụ ha.",
+    "tech": "Ewubere Ya Na",
+    "techFrontend": "Ihu na ụzọ API",
+    "techDb": "Nchekwa data",
+    "techData": "Iwe data",
+    "techI18n": "Mmemme asụsụ (8 asụsụ)",
+    "techMotion": "Ihe ngosi",
+    "openSource": "Mepe Isi",
+    "openSourceDesc": "Ọrụ a bụ mepere emepe na",
+    "reachOut": "Kpọtụrụ",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Mechie"
   },
   "footer": {
     "brand": "Eid Together",

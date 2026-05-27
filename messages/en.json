@@ -15,7 +15,8 @@
     "homeAria": "Eid Together home",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "mobileAria": "Mobile navigation"
+    "mobileAria": "Mobile navigation",
+    "about": "About"
   },
   "language": {
     "aria": "Switch language",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Celebrating together ✨"
+  },
+  "about": {
+    "title": "About Eid Together",
+    "description": "A global celebration wall where anyone can share an Eid wish and react to wishes from around the world. No signup, no accounts — just blessings.",
+    "motivation": "Motivation",
+    "motivationText": "Eid is celebrated by millions across the globe, but most of us only share it with people we know. This project is a small attempt to feel the scale of that celebration — a space where you can drop a blessing and scroll through wishes from strangers in other countries, in their own languages.",
+    "tech": "Built with",
+    "techFrontend": "Frontend & API routes",
+    "techDb": "Database",
+    "techData": "Data fetching",
+    "techI18n": "Internationalization (8 languages)",
+    "techMotion": "Animations",
+    "openSource": "Open Source",
+    "openSourceDesc": "This project is open source on",
+    "reachOut": "Reach Out",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Close"
   },
   "footer": {
     "brand": "Eid Together",

@@ -192,6 +192,21 @@
   color: var(--ivory);
 }
 
+.drawerLinkAbout {
+  composes: drawerLink;
+  color: var(--gold);
+  font-weight: 500;
+  background: none;
+  text-align: start;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.drawerLinkAbout:hover {
+  color: var(--gold-pale);
+}
+
 .actions {
   display: flex;
   align-items: center;

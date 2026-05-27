@@ -15,7 +15,8 @@
     "homeAria": "Retour à l’accueil",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "mobileAria": "Navigation mobile"
+    "mobileAria": "Navigation mobile",
+    "about": "À propos"
   },
   "language": {
     "aria": "Changer de langue",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Célébrons ensemble ✨"
+  },
+  "about": {
+    "title": "À propos d'Eid Together",
+    "description": "Un mur de célébration mondial où chacun peut partager un vœu d'Eid et réagir aux vœux du monde entier. Pas d'inscription, pas de comptes — juste des bénédictions.",
+    "motivation": "Motivation",
+    "motivationText": "L'Aïd est célébrée par des millions de personnes dans le monde, mais la plupart d'entre nous ne la partagent qu'avec des personnes que nous connaissons. Ce projet est une petite tentative pour ressentir l'ampleur de cette célébration — un espace où vous déposez une bénédiction et parcourez les vœux d'inconnus d'autres pays, dans leurs propres langues.",
+    "tech": "Construit avec",
+    "techFrontend": "Frontend & routes API",
+    "techDb": "Base de données",
+    "techData": "Récupération de données",
+    "techI18n": "Internationalisation (8 langues)",
+    "techMotion": "Animations",
+    "openSource": "Open Source",
+    "openSourceDesc": "Ce projet est open source sur",
+    "reachOut": "Contact",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Fermer"
   },
   "footer": {
     "brand": "Eid Together",

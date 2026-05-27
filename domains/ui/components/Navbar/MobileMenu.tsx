@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { key: 'shareWish', href: '/message' },
 ];
 
-export default function MobileMenu() {
+export default function MobileMenu({ onOpenAbout }: { onOpenAbout: () => void }) {
   const [open, setOpen] = useState(false);
   const t = useTranslations('nav');
 
@@ -26,6 +26,10 @@ export default function MobileMenu() {
       document.body.style.overflow = '';
     };
   }, [open]);
+
+  function close() {
+    setOpen(false);
+  }
 
   return (
     <>
@@ -41,7 +45,7 @@ export default function MobileMenu() {
       </button>
 
       {open && (
-        <div className={styles.overlay} onClick={() => setOpen(false)} />
+        <div className={styles.overlay} onClick={close} />
       )}
 
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`}>
@@ -57,11 +61,14 @@ export default function MobileMenu() {
               key={link.key}
               href={link.href}
               className={styles.drawerLink}
-              onClick={() => setOpen(false)}
+              onClick={close}
             >
               {t(link.key)}
             </Link>
           ))}
+          <button type="button" className={styles.drawerLinkAbout} onClick={() => { close(); onOpenAbout(); }}>
+            {t('about')}
+          </button>
         </nav>
       </div>
     </>

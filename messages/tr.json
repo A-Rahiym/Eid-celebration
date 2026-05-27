@@ -15,7 +15,8 @@
     "homeAria": "Ana sayfaya dön",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
-    "mobileAria": "Mobil gezinme"
+    "mobileAria": "Mobil gezinme",
+    "about": "Hakkında"
   },
   "language": {
     "aria": "Dil değiştir",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Birlikte kutluyoruz ✨"
+  },
+  "about": {
+    "title": "Eid Together Hakkında",
+    "description": "Herkesin bir Bayram dileği paylaşabildiği ve dünyanın dört bir yanından dileklere tepki verebildiği küresel bir kutlama duvarı. Kayıt yok, hesap yok — sadece dualar.",
+    "motivation": "Motivasyon",
+    "motivationText": "Bayram, dünya genelinde milyonlarca kişi tarafından kutlanır, ancak çoğumuz bunu yalnızca tanıdıklarımızla paylaşırız. Bu proje, bu kutlamanın büyüklüğünü hissetmek için küçük bir girişimdir — bir dua bırakabileceğiniz ve diğer ülkelerden yabancıların kendi dillerindeki dileklerini görebileceğiniz bir alan.",
+    "tech": "Yapıldı",
+    "techFrontend": "Ön yüz ve API yolları",
+    "techDb": "Veritabanı",
+    "techData": "Veri çekme",
+    "techI18n": "Uluslararasılaştırma (8 dil)",
+    "techMotion": "Animasyonlar",
+    "openSource": "Açık Kaynak",
+    "openSourceDesc": "Bu proje açık kaynaklıdır",
+    "reachOut": "İletişim",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Kapat"
   },
   "footer": {
     "brand": "Eid Together",

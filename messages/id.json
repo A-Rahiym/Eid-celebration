@@ -15,7 +15,8 @@
     "homeAria": "Kembali ke beranda",
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
-    "mobileAria": "Navigasi seluler"
+    "mobileAria": "Navigasi seluler",
+    "about": "Tentang"
   },
   "language": {
     "aria": "Ganti bahasa",
@@ -97,6 +98,23 @@
   },
   "loading": {
     "label": "Merayakan bersama ✨"
+  },
+  "about": {
+    "title": "Tentang Eid Together",
+    "description": "Dinding perayaan global tempat siapa pun dapat berbagi harapan Idul Fitri dan bereaksi terhadap harapan dari seluruh dunia. Tanpa pendaftaran, tanpa akun — hanya berkah.",
+    "motivation": "Motivasi",
+    "motivationText": "Idul Fitri dirayakan oleh jutaan orang di seluruh dunia, tetapi kebanyakan dari kita hanya membagikannya dengan orang yang kita kenal. Proyek ini adalah upaya kecil untuk merasakan skala perayaan itu — sebuah ruang di mana Anda menaruh berkah dan menelusuri harapan dari orang asing di negara lain, dalam bahasa mereka sendiri.",
+    "tech": "Dibangun dengan",
+    "techFrontend": "Frontend & rute API",
+    "techDb": "Basis data",
+    "techData": "Pengambilan data",
+    "techI18n": "Internasionalisasi (8 bahasa)",
+    "techMotion": "Animasi",
+    "openSource": "Sumber Terbuka",
+    "openSourceDesc": "Proyek ini sumber terbuka di",
+    "reachOut": "Hubungi",
+    "developer": "Fullstack Engineer & Tech Adventurer",
+    "close": "Tutup"
   },
   "footer": {
     "brand": "Eid Together",
